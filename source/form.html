@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Pink</title>
+    <title>HTML Academy: Пинк</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header class="page-header">
-      <a href="/index_mobile.html" class="page-header__logo-wrap">
-        <img class="page-header__menu-logo page-header__logo page-header__logo--hover page-header__logo--down" src="/img/logotype-white-mobile.svg" alt="PINK" width="75" height="22">
+      <a href="/index_mobile.html" class="page-header__logo-wrap" title="Главная" aria-label="Главная">
+        <img class="page-header__menu-logo page-header__logo page-header__logo--down" src="/img/logotype-white-mobile.svg" alt="PINK" width="75" height="22">
       </a>
-      <div class="page-header__hamburger-wrap">
-        <img class="page-header__menu-hamburger page-header__menu page-header__menu--hover page-header__menu--down" src="/img/menu-burger.svg" alt="Меню открыть" width="50" height="24">
-        <img class="page-header__menu-cross page-header__menu page-header__menu--hover page-header__menu--down" src="/img/menu-cross.svg" alt="Меню закрыть" width="24" height="23">
-      </div>
-      <nav class="page-header__nav-wrap">
-        <ul class="page-header__nav-ul">
-          <li class="page-header__nav-link page-header__nav-link--hover page-header__nav-link--down  page-header__nav-link--active"><a href="source/index.html" title="Главная">ГЛАВНАЯ</a></li>
-          <li class="page-header__nav-link page-header__nav-link--hover page-header__nav-link--down  page-header__nav-link--active"><a href="source/photo.html" title="Фотографии">ФОТОГРАФИИ</a></li>
-          <li class="page-header__nav-link page-header__nav-link--hover page-header__nav-link--down  page-header__nav-link--active"><a href="source/form.html" title="Конкурс">КОНКУРС</a></li>
-          <li class="page-header__nav-link page-header__nav-link--hover page-header__nav-link--down  page-header__nav-link--active"><a href="#" title="HTMLACADEMY">HTMLACADEMY</a></li>
+      <button class="menu-hamburger menu-hamburger--down" aria-label="Открыть меню" type="button">Открыть меню</button>
+      <nav class="main-nav">
+        <ul class="main-nav__nav-list">
+          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="index.html" title="Главная" aria-label="Главная">ГЛАВНАЯ</a></li>
+          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="photo.html" title="Фотографии" aria-label="Фотографии">ФОТОГРАФИИ</a></li>
+          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="#" title="Конкурс" aria-label="Конкурс">КОНКУРС</a></li>
+          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="#" title="HTMLACADEMY" aria-label="HTMLACADEMY">HTMLACADEMY</a></li>
         </ul>
       </nav>
     </header>
@@ -29,67 +25,67 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form__userName-fieldset">
           <label class="form__surname-label" for="surname">ФАМИЛИЯ:</label>
-          <input class="form__surname-input form__userName-input form__userName-input--hover form__userName-input--active" type="text" id="surname" name="surname" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите фамилию *" required>
+          <input class="form__surname-input form__userName-input" type="text" id="surname" name="surname" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите фамилию *" required>
           <label class="form__name-label" for="name">ИМЯ:</label>
-          <input class="form__name-input form__userName-input form__userName-input--hover form__userName-input--active" type="text" id="name" name="name" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите ваше имя *" required>
+          <input class="form__name-input form__userName-input" type="text" id="name" name="name" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите ваше имя *" required>
           <label class="form__patronymic-label"  for="patronymic">ОТЧЕСТВО:</label>
-          <input class="form__patronymic-input form__userName-input form__userName-input--hover form__userName-input--active"  type="text" id="patronymic" name="patronymic" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Ну и отчество тоже">
+          <input class="form__patronymic-input form__userName-input"  type="text" id="patronymic" name="patronymic" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Ну и отчество тоже">
         </fieldset>
         <fieldset class="form__achivements-fieldset">
           <label class="form__achivements-header">Ваши безбашенные достижения в путешествии</label>
-          <input class="form__input-sharkSelfy  form__achivements-input form__achivements-input--hover form__achivements-input--down" id="checked-field-sharkSelfy" type="checkbox" name="check1" value="check1" checked>
+          <input class="form__input-sharkSelfy  form__achivements-input form__achivements-input--down" id="checked-field-sharkSelfy" type="checkbox" name="check1" value="check1" checked>
           <label class="form__achivements-label" for="checked-field-sharkSelfy">Сделал селфи с акулой</label>
-          <input class="form__input-burnt  form__achivements-input form__achivements-input--hover form__achivements-input--down" id="checked-field-burnt" type="checkbox" name="check2" value="check2" checked>
+          <input class="form__input-burnt  form__achivements-input form__achivements-input--down" id="checked-field-burnt" type="checkbox" name="check2" value="check2" checked>
           <label class="form__achivements-label" for="checked-field-burnt">Обгорел на пляже</label>
-          <input class="form__input-norris  form__achivements-input form__achivements-input--hover form__achivements-input--down" id="checked-field-norris" type="checkbox" name="check3" value="check3">
+          <input class="form__input-norris  form__achivements-input form__achivements-input--down" id="checked-field-norris" type="checkbox" name="check3" value="check3">
           <label class="form__achivements-label" for="checked-field-norris">Видел Чака Норриса</label>
-          <input class="form__input-boughtSouvenirs  form__achivements-input form__achivements-input--hover form__achivements-input--down" id="checked-field-boughtSouvenirs" type="checkbox" name="check4" value="check4">
+          <input class="form__input-boughtSouvenirs  form__achivements-input form__achivements-input--down" id="checked-field-boughtSouvenirs" type="checkbox" name="check4" value="check4">
           <label class="form__achivements-label" for="checked-field-boughtSouvenirs">Накупил сувениров</label>
-          <input class="form__input-keptTower  form__achivements-input form__achivements-input--hover form__achivements-input--down" id="checked-field-keptTower" type="checkbox" name="check5" value="check5" checked>
+          <input class="form__input-keptTower  form__achivements-input form__achivements-input--down" id="checked-field-keptTower" type="checkbox" name="check5" value="check5" checked>
           <label class="form__achivements-label" for="checked-field-keptTower">Удержал башню</label>
-          <input class="form__input-trashedHotel form__achivements-input form__achivements-input--hover form__achivements-input--down" id="checked-field-trashedHotel" type="checkbox" name="check6" value="check6">
+          <input class="form__input-trashedHotel form__achivements-input form__achivements-input--down" id="checked-field-trashedHotel" type="checkbox" name="check6" value="check6">
           <label class="form__achivements-label" for="checked-field-trashedHotel">Разгромил отель</label>
         </fieldset>
         <fieldset class="form__contacts-fieldset">
           <label class="form__contacts-labelTelNumber" for="telNumber">НОМЕР ТЕЛЕФОНА</label>
-          <input class="form__input-TelNumber form__contacts-input form__contacts-input--hover form__contacts-input--active" id="telNumber" type="tel" name="tel" pattern="^(8|\+7)[0-9]{7,10}" placeholder="Номер, пожалуйста">
+          <input class="form__input-TelNumber form__contacts-input" id="telNumber" type="tel" name="tel" pattern="^(8|\+7)[0-9]{7,10}" placeholder="Номер, пожалуйста">
           <label class="form__contacts-labelEmail" for="email">АДРЕС ПОЧТЫ</label>
-          <input class="form__input-Email form__contacts-input form__contacts-input--hover form__contacts-input--active" type="email" id="email" pattern="[\x1F-\xBF]*{50}" name="email" placeholder="Введите почту *">
+          <input class="form__input-Email form__contacts-input" type="email" id="email" pattern="[\x1F-\xBF]*{50}" name="email" placeholder="Введите почту *">
         </fieldset>
         <fieldset class="form__whatApp-fieldset">
           <label class="form__whatApp-header">С каким приложением путешествовали?</label>
-          <input class="form__input-pinkForiOS form__whatApp-input form__whatApp-input--hover form__whatApp-input--active" id="checked-field-pinkForiOS" type="radio" name="radio1" value="radioCheck1" checked>
+          <input class="form__input-pinkForiOS form__whatApp-input" id="checked-field-pinkForiOS" type="radio" name="radio1" value="radioCheck1" checked>
           <label class="form__pinkForiOS-label" for="checked-field-pinkForiOS">Pink для iOS</label>
-          <input class="form__input-pinkForAndriod  form__whatApp-input form__whatApp-input--hover form__whatApp-input--active" id="checked-field-pinkForAndriod" type="radio" name="radio2" value="radioCheck2">
+          <input class="form__input-pinkForAndriod  form__whatApp-input" id="checked-field-pinkForAndriod" type="radio" name="radio2" value="radioCheck2">
           <label class="form__pinkForAndriod-label" for="checked-field-pinkForAndriod">Pink на Android</label>
-          <input class="form__input-pinkForWindows  form__whatApp-input form__whatApp-input--hover form__whatApp-input--active" id="checked-field-pinkForWindows" type="radio" name="radio3" value="radioCheck3">
+          <input class="form__input-pinkForWindows  form__whatApp-input" id="checked-field-pinkForWindows" type="radio" name="radio3" value="radioCheck3">
           <label class="form__pinkForWindows-label" for="checked-field-pinkForWindows">Windows Phone</label>
         </fieldset>
         <fieldset class="form__emotions-fieldset">
           <label class="form__emotions-label" for="textarea-field">ОПИШИТЕ СВОИ ЭМОЦИИ</label>
           <textarea class="form__emotions-textarea" id="textarea-field" name="textarea-field" rows=5 maxlength=1000 placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          <input class="form__emotions-button form__emotions-button--hover form__emotions-button--down form__emotions-button--disabled" type="submit" value="ОТПРАВИТЬ">
+          <input class="form__emotions-button form__emotions-button--down form__emotions-button--disabled" type="submit" value="ОТПРАВИТЬ">
           <label class="form__emotions-stars">*</label>
           <label class="form__emotions-requiredFields"> — обязательные поля</label>
         </fieldset>
       </form>
     </main>
     <footer class="page-footer">
-      <a href="/index_mobile.html" class="page-footer__pinkLogo page-footer__logo page-footer__logo--hover page-footer__logo--down"  title="Pink">
+      <a href="/index.html" class="page-footer__pinkLogo page-footer__logo page-footer__logo--down" title="PINK" aria-label="Pink">
         <img src="/img/logotype-blue-tablet.svg" alt="PINK" width="147" height="40">
       </a>
-      <a href="https://twitter.com/" class="page-footer__twitterLogo page-footer__logo page-footer__logo--hover page-footer__logo--down"  title="Твиттер">
+      <a href="https://twitter.com/" class="page-footer__twitterLogo page-footer__logo page-footer__logo--down"  title="Твиттер" aria-label="Твиттер">
         <img src="/img/twit.svg" alt="Твиттер" width="18" height="14">
       </a>
-      <a href="https://www.facebook.com/" class="page-footer__facebookLogo page-footer__logo page-footer__logo--hover page-footer__logo--down" title="Фэйсбук">
+      <a href="https://www.facebook.com/" class="page-footer__facebookLogo page-footer__logo page-footer__logo--down" title="Фэйсбук" aria-label="Фэйсбук">
         <img src="/img/facbok.svg" alt="Фэйсбук" width="9" height="18">
       </a>
-      <a href="https://www.youtube.com/" class="page-footer__youtubeLogo page-footer__logo page-footer__logo--hover page-footer__logo--down" title="Ютюб">
+      <a href="https://www.youtube.com/" class="page-footer__youtubeLogo page-footer__logo page-footer__logo--down" title="Ютюб" aria-label="Ютюб">
         <img src="/img/ytube.svg" alt="Ютюб" width="15" height="13">
       </a>
       <div class="page-footer__htmlacademy-wrap">
         <p class="page-footer__htmlacademy-text">Разработано</p>
-        <a href="https://www.htmlacademy.ru/" class="page-footer__htmlacademy-link page-footer__htmlacademy-link--hover page-footer__htmlacademy-link--down" title="HtmlAcademy">
+        <a href="https://www.htmlacademy.ru/" class="page-footer__htmlacademy-link page-footer__htmlacademy-link--down" title="HtmlAcademy" aria-label="HtmlAcademy">
           <img src="/img/htmlacademy.svg" alt="HTMLAcademy" width="27" height="34">
         </a>
       </div>

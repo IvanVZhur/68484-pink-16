@@ -1,47 +1,41 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Pink</title>
+    <title>HTML Academy: Пинк</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header class="page-header">
-      <a href="/index_mobile.html" class="page-header__logo-wrap">
-        <img class="page-header__menu-logo page-header__logo page-header__logo--hover page-header__logo--down" src="/img/logotype-white-mobile.svg" alt="PINK" width="75" height="22">
+      <a href="#" class="page-header__logo-wrap" title="Главная" aria-label="Главная">
+        <img class="page-header__menu-logo page-header__logo page-header__logo--down" src="/img/logotype-white-mobile.svg" alt="PINK" width="75" height="22">
       </a>
-      <div class="page-header__hamburger-wrap">
-        <img class="page-header__menu-hamburger page-header__menu page-header__menu--hover page-header__menu--down" src="/img/menu-burger.svg" alt="Меню открыть" width="50" height="24">
-        <img class="page-header__menu-cross page-header__menu page-header__menu--hover page-header__menu--down" src="/img/menu-cross.svg" alt="Меню закрыть" width="24" height="23">
-      </div>
-      <nav class="page-header__nav-wrap">
-        <ul class="page-header__nav-ul">
-          <li class="page-header__nav-link page-header__nav-link--hover page-header__nav-link--down  page-header__nav-link--active"><a href="source/index.html" title="Главная">ГЛАВНАЯ</a></li>
-          <li class="page-header__nav-link page-header__nav-link--hover page-header__nav-link--down  page-header__nav-link--active"><a href="source/photo.html" title="Фотографии">ФОТОГРАФИИ</a></li>
-          <li class="page-header__nav-link page-header__nav-link--hover page-header__nav-link--down  page-header__nav-link--active"><a href="source/form.html" title="Конкурс">КОНКУРС</a></li>
-          <li class="page-header__nav-link page-header__nav-link--hover page-header__nav-link--down  page-header__nav-link--active"><a href="#" title="HTMLACADEMY">HTMLACADEMY</a></li>
+      <button class="menu-hamburger menu-hamburger--down" aria-label="Открыть меню" type="button">Открыть меню</button>
+      <nav class="main-nav">
+        <ul class="main-nav__nav-list">
+          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="#" title="Главная" aria-label="Главная">ГЛАВНАЯ</a></li>
+          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="photo.html" title="Фотографии" aria-label="Фотографии">ФОТОГРАФИИ</a></li>
+          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="form.html" title="Конкурс" aria-label="Конкурс">КОНКУРС</a></li>
+          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="#" title="HTMLACADEMY" aria-label="HTMLACADEMY">HTMLACADEMY</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="intro">
         <h1 class="intro__header">Взгляните на жизнь иначе!</h1>
-        <div class="intro__iphoneInHand-wrap">
+        <div class="intro__background-image-wrap">
           <img src="/img/iphone-5-in-hand-png.png" alt="Iphone в руке" class="intro__iphoneInHand-img">
         </div>
-        <a href="https://www.apple.com/ru/itunes/" class="intro__downloadBtn-link">
-          <div class="intro__downloadBtn intro__downloadBtn--hover intro__downloadBtn--down" title="Перейти в AppleStore">Скачать приложение</div>
-        </a>
+        <a href="https://www.apple.com/ru/itunes/" class="intro__download-link intro__download-link--down" title="Перейти в AppleStore" aria-label="Скачать приложение">Скачать приложение</a>
         <div class="intro__platforms-wrap">
-          <a href="https://www.apple.com/ru/itunes/" title="Перейти в AppleStore" class="intro__appleStore-link">
+          <a href="https://www.apple.com/ru/itunes/" title="Перейти в AppleStore" aria-label="Перейти в AppleStore" class="intro__appleStore-link">
             <img src="/img/apple-logo.svg" alt="Apple-logo" width="47" height="56">
           </a>
-          <a href="https://play.google.com/store" title="Перейти в GoogleStore" class="intro__androidStore-link">
+          <a href="https://play.google.com/store" title="Перейти в GoogleStore" aria-label="Перейти в GoogleStore" class="intro__androidStore-link">
             <img src="/img/android-logo.svg" alt="Android-logo" width="43" height="47">
           </a>
-          <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone?icid=CNavAppsWindowsPhoneApps" title="Перейти в WindowsStore" class="intro__androidStore-link">
-            <img src="/img/microsoft-logo.svg" alt="Windows-logo" width="44" height="41">
+          <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone?icid=CNavAppsWindowsPhoneApps" title="Перейти в WindowsStore" aria-label="Windows-logo"  class="intro__androidStore-link">
+            <img src="/img/microsoft-logo.svg" title="Windows-logo" width="44" height="41">
           </a>
         </div>
         <p class="intro__availableFor">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
@@ -66,7 +60,6 @@
         </div>
       </section>
       <section class="reviews">
-        <h1 class="reviews__header">Отзывы</h1>
         <div class="reviews__slider-wrap">
           <article class="reviews__slider-item">
             <h2 class="reviews__slider-header">Николай Петров</h2>
@@ -81,11 +74,11 @@
             <p class="reviews__slider-text">Текст отзыва</p>
           </article>
         </div>
-        <div class="reviews__paginator-wrap">
-          <i class="reviews__paginator-item reviews__paginator-item--hover reviews__paginator-item--down"></i>
-          <i class="reviews__paginator-item reviews__paginator-item--hover reviews__paginator-item--down"></i>
-          <i class="reviews__paginator-item reviews__paginator-item--hover reviews__paginator-item--down"></i>
-        </div>
+        <p class="reviews__toggles slider-toggle">
+          <button class="reviews__toggle reviews__toggle--down" type="button"></button>
+          <button class="reviews__toggle reviews__toggle--down" type="button"></button>
+          <button class="reviews__toggle reviews__toggle--down" type="button"></button>
+        </p>
       </section>
       <section class="price">
         <h1 class="price__header">Цены</h1>
@@ -167,11 +160,11 @@
               </div>
             </div>
           </article>
-          <div class="price__paginator-wrap">
-            <i class="price__paginator-item price__paginator-item--hover price__paginator-item--down"></i>
-            <i class="price__paginator-item price__paginator-item--hover price__paginator-item--down"></i>
-            <i class="price__paginator-item price__paginator-item--hover price__paginator-item--down"></i>
-          </div>
+          <p class="price__toggles slider-toggle">
+            <button class="price__toggle price__toggle--down" type="button"></button>
+            <button class="price__toggle price__toggle--down" type="button"></button>
+            <button class="price__toggle price__toggle--down" type="button"></button>
+          </p>
         </div>
       </section>
       <section class="contacts">
