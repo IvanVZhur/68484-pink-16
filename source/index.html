@@ -3,16 +3,14 @@
   <head>
     <title>HTML Academy: Пинк</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a href="#" class="page-header__logo-wrap" title="Главная" aria-label="Главная">
-        <img class="page-header__menu-logo page-header__logo page-header__logo--down" src="/img/logotype-white-mobile.svg" alt="PINK" width="75" height="22">
-      </a>
+      <a href="#" class="page-header__logo-link page-header__logo-link--down" title="Главная">PINK</a>
       <button class="menu-hamburger menu-hamburger--down" aria-label="Открыть меню" type="button">Открыть меню</button>
       <nav class="main-nav">
-        <ul class="main-nav__nav-list">
+        <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="#" title="Главная" aria-label="Главная">ГЛАВНАЯ</a></li>
           <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="photo.html" title="Фотографии" aria-label="Фотографии">ФОТОГРАФИИ</a></li>
           <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="form.html" title="Конкурс" aria-label="Конкурс">КОНКУРС</a></li>
@@ -28,17 +26,11 @@
         </div>
         <a href="https://www.apple.com/ru/itunes/" class="intro__download-link intro__download-link--down" title="Перейти в AppleStore" aria-label="Скачать приложение">Скачать приложение</a>
         <div class="intro__platforms-wrap">
-          <a href="https://www.apple.com/ru/itunes/" title="Перейти в AppleStore" aria-label="Перейти в AppleStore" class="intro__appleStore-link">
-            <img src="/img/apple-logo.svg" alt="Apple-logo" width="47" height="56">
-          </a>
-          <a href="https://play.google.com/store" title="Перейти в GoogleStore" aria-label="Перейти в GoogleStore" class="intro__androidStore-link">
-            <img src="/img/android-logo.svg" alt="Android-logo" width="43" height="47">
-          </a>
-          <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone?icid=CNavAppsWindowsPhoneApps" title="Перейти в WindowsStore" aria-label="Windows-logo"  class="intro__androidStore-link">
-            <img src="/img/microsoft-logo.svg" title="Windows-logo" width="44" height="41">
-          </a>
+          <a href="https://www.apple.com/ru/itunes/"  class="intro__appleStore-link intro__platforms-link" title="Перейти в AppleStore" aria-label="Перейти в AppleStore">AppleStore</a>
+          <a href="https://play.google.com/store"  class="intro__androidStore-link intro__platforms-link" title="Перейти в GoogleStore" aria-label="Перейти в GoogleStore">GoogleStore</a>
+          <a href="https://www.microsoft.com/ru-ru/store/apps/windows-phone?icid=CNavAppsWindowsPhoneApps" class="intro__androidStore-link intro__platforms-link" title="Перейти в WindowsStore" aria-label="Windows-logo">WindowsStore</a>
         </div>
-        <p class="intro__availableFor">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
+        <p class="intro__available-text">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
       </section>
       <section class="info">
         <h2 class="info__header info__header--long">Устали от серости мегаполиса?</h2>
@@ -57,22 +49,21 @@
             <p class="info__advanages-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
-        <div class="info__applView-wrap">
-          <img src="/img/Layer155.png" alt="Вид приложения" class="info__applView-screen">
+        <div class="info__appl-view-wrap">
         </div>
       </section>
       <section class="reviews">
         <div class="reviews__slider-wrap">
           <blockquote class="reviews__slider-item">
-            <h3 class="reviews__slider-header">Николай Петров</h3>
+            <cite class="reviews__slider-header">Николай Петров</cite>
             <p class="reviews__slider-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
           <blockquote class="reviews__slider__item">
-            <h3 class="reviews__slider-header">Имя Фамилия</h3>
+            <cite class="reviews__slider-header">Имя Фамилия</cite>
             <p class="reviews__slider-text">Текст отзыва</p>
           </blockquote>
           <blockquote class="reviews__slider-item">
-            <h3 class="reviews__slider-header">Имя фамилия</h3>
+            <cite class="reviews__slider-header">Имя фамилия</cite>
             <p class="reviews__slider-text">Текст отзыва</p>
           </blockquote>
         </div>
@@ -169,19 +160,19 @@
       </section>
     </main>
     <footer class="page-footer">
-      <section class="contacts-footer visually-hidden">
-        <h2 class="contacts-footer__header">ОСТАЛИСЬ ВОПРОСЫ? СВЯЖИТЕСЬ С НАМИ!</h2>
-        <h3 class="contacts-footer__call">Звоните:</h3>
-        <p>
-          <a href="tel:+78125556666" class="contacts-footer__phone">+7 (812) 555-66-66</a>
+      <section class="contacts">
+        <h2 class="contacts__header-main">ОСТАЛИСЬ ВОПРОСЫ? СВЯЖИТЕСЬ С НАМИ!</h2>
+        <h3 class="contacts__header contacts__call">Звоните:</h3>
+        <p class="contacts__text contacts__phone-wrap">
+          <a href="tel:+78125556666" class="contacts__link contacts__phone">+7 (812) 555-66-66</a>
         </p>
-        <h3 class="contacts-footer__write">Пишите:</h3>
-        <p>
-          <a href="mailto:mail@htmlacademy.ru" class="contacts-footer__email">mail@htmlacademy.ru</a>
+        <h3 class="contacts__header contacts__write">Пишите:</h3>
+        <p class="contacts__text contacts__email-wrap">
+          <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__email">mail@htmlacademy.ru</a>
         </p>
-        <h3 class="contacts-footer__arrive">Приезжайте в гости:</h3>
-        <p class="contacts-footer__address">ул. Большая Конюшенная, 19/8</p>
-        <div class="contacts-footer__map-wrap">
+        <h3 class="contacts__header contacts__arrive">Приезжайте в гости:</h3>
+        <p class="contacts__text  contacts__address">ул. Большая Конюшенная, 19/8</p>
+        <div class="contacts__map-wrap">
           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac4d8692a136288115be5940b7bb4dde73adfdc5405b1cf7e46be9a90f1635d1d&amp;width=320&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
       </section>
