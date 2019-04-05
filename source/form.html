@@ -7,77 +7,85 @@
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="page-header__logo-link page-header__logo-link--down" title="Главная">PINK</a>
+      <a href="index.html" class="page-header__logo-link page-header__logo-link--down" aria-label="Переход на главную страницу">PINK</a>
       <button class="menu-hamburger menu-hamburger--down" aria-label="Открыть меню" type="button">Открыть меню</button>
       <nav class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="index.html" title="Главная" aria-label="Главная">ГЛАВНАЯ</a></li>
-          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="photo.html" title="Фотографии" aria-label="Фотографии">ФОТОГРАФИИ</a></li>
-          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="#" title="Конкурс" aria-label="Конкурс">КОНКУРС</a></li>
-          <li class="main-nav__item main-nav__item--down"><a class="main-nav__link main-nav__link--down" href="#" title="HTMLACADEMY" aria-label="HTMLACADEMY">HTMLACADEMY</a></li>
+          <li class="main-nav__item main-nav__item--down">
+            <a class="main-nav__link main-nav__link--down" href="index.html" aria-label="Главная">Главная</a>
+          </li>
+          <li class="main-nav__item main-nav__item--down">
+            <a class="main-nav__link main-nav__link--down" href="photo.html" aria-label="Фотографии">Фотографии</a>
+          </li>
+          <li class="main-nav__item main-nav__item--down">
+            <a class="main-nav__link main-nav__link--down" href="#" aria-label="Конкурс">Конкурс</a>
+          </li>
+          <li class="main-nav__item main-nav__item--down">
+            <a class="main-nav__link main-nav__link--down" href="#" aria-label="HTMLACADEMY">HTMLACADEMY</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main class="main">
       <h1 class="main_header">Конкурс на самое безбашенное путешествие с Пинк</h1>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__userName-fieldset">
-          <label class="form__surname-label" for="surname">ФАМИЛИЯ:</label>
-          <input class="form__surname-input form__userName-input" type="text" id="surname" name="surname" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите фамилию *" required>
-          <label class="form__name-label" for="name">ИМЯ:</label>
-          <input class="form__name-input form__userName-input" type="text" id="name" name="name" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите ваше имя *" required>
-          <label class="form__patronymic-label"  for="patronymic">ОТЧЕСТВО:</label>
-          <input class="form__patronymic-input form__userName-input"  type="text" id="patronymic" name="patronymic" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Ну и отчество тоже">
+        <fieldset class="form__user-name-wrap">
+          <label class="form__user-name form__user-name--label-surname" for="surname">Фамилия:</label>
+          <input class="form__user-name form__user-name--input-surname" type="text" id="surname" name="surname" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите фамилию *" required>
+          <label class="form__user-name form__user-name--label-name" for="name">Имя:</label>
+          <input class="form__user-name form__user-name--input-name" type="text" id="name" name="name" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите ваше имя *" required>
+          <label class="form__user-name form__user-name--label-patronymic"  for="patronymic">Отчество:</label>
+          <input class="form__user-name form__user-name--input-patronymic"  type="text" id="patronymic" name="patronymic" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Ну и отчество тоже">
         </fieldset>
-        <fieldset class="form__achivements-fieldset">
-          <label class="form__achivements-header">Ваши безбашенные достижения в путешествии</label>
-          <input class="form__input-shark-selfy  form__achivements-input form__achivements-input--down" id="checked-field-sharkSelfy" type="checkbox" name="check1" value="check1" checked>
-          <label class="form__achivements-label" for="checked-field-sharkSelfy">Сделал селфи с акулой</label>
-          <input class="form__input-burnt  form__achivements-input form__achivements-input--down" id="checked-field-burnt" type="checkbox" name="check2" value="check2" checked>
-          <label class="form__achivements-label" for="checked-field-burnt">Обгорел на пляже</label>
-          <input class="form__input-norris  form__achivements-input form__achivements-input--down" id="checked-field-norris" type="checkbox" name="check3" value="check3">
-          <label class="form__achivements-label" for="checked-field-norris">Видел Чака Норриса</label>
-          <input class="form__input-bought-souvenirs  form__achivements-input form__achivements-input--down" id="checked-field-boughtSouvenirs" type="checkbox" name="check4" value="check4">
-          <label class="form__achivements-label" for="checked-field-boughtSouvenirs">Накупил сувениров</label>
-          <input class="form__input-kept-tower  form__achivements-input form__achivements-input--down" id="checked-field-keptTower" type="checkbox" name="check5" value="check5" checked>
-          <label class="form__achivements-label" for="checked-field-keptTower">Удержал башню</label>
-          <input class="form__input-trashed-hotel form__achivements-input form__achivements-input--down" id="checked-field-trashedHotel" type="checkbox" name="check6" value="check6">
-          <label class="form__achivements-label" for="checked-field-trashedHotel">Разгромил отель</label>
+        <fieldset class="form__achivements-wrap">
+          <label class="form__header form__achivements-header">Ваши безбашенные достижения в путешествии</label>
+          <input class="form__achivements form__achivements--input form__achivements--input-down" id="checked-field-sharkSelfy" type="checkbox" name="check1" value="check1" checked>
+          <label class="form__achivements form__achivements--label" for="checked-field-sharkSelfy">Сделал селфи с акулой</label>
+          <input class="form__achivements form__achivements--input form__achivements--input-down" id="checked-field-burnt" type="checkbox" name="check2" value="check2" checked>
+          <label class="form__achivements form__achivements--label" for="checked-field-burnt">Обгорел на пляже</label>
+          <input class="form__achivements form__achivements--input form__achivements--input-down" id="checked-field-norris" type="checkbox" name="check3" value="check3">
+          <label class="form__achivements form__achivements--label" for="checked-field-norris">Видел Чака Норриса</label>
+          <input class="form__achivements form__achivements--input form__achivements--input-down" id="checked-field-boughtSouvenirs" type="checkbox" name="check4" value="check4">
+          <label class="form__achivements form__achivements--label" for="checked-field-boughtSouvenirs">Накупил сувениров</label>
+          <input class="form__achivements form__achivements--input form__achivements--input-down" id="checked-field-keptTower" type="checkbox" name="check5" value="check5" checked>
+          <label class="form__achivements form__achivements--label" for="checked-field-keptTower">Удержал башню</label>
+          <input class="form__achivements form__achivements--input form__achivements--input-down" id="checked-field-trashedHotel" type="checkbox" name="check6" value="check6">
+          <label class="form__achivements form__achivements--label" for="checked-field-trashed-hotel">Разгромил отель</label>
         </fieldset>
-        <fieldset class="form__contacts-fieldset">
-          <label class="form__contacts-label-tel" for="telNumber">НОМЕР ТЕЛЕФОНА</label>
-          <input class="form__input-tel form__contacts-input" id="telNumber" type="tel" name="tel" pattern="^(8|\+7)[0-9]{7,10}" placeholder="Номер, пожалуйста">
-          <label class="form__contacts-label-email" for="email">АДРЕС ПОЧТЫ</label>
-          <input class="form__input-email form__contacts-input" type="email" id="email" pattern="[\x1F-\xBF]*{50}" name="email" placeholder="Введите почту *">
+        <fieldset class="form__contacts-wrap">
+          <label class="form__contacts form__contacts--label" for="telNumber">Номер телефона</label>
+          <input class="form__contacts form__contacts--input form__contacts--input-down" id="telNumber" type="tel" name="tel" pattern="^(8|\+7)[0-9]{7,10}" placeholder="Номер, пожалуйста">
+          <label class="form__contacts form__contacts--label" for="email">Адрес почты</label>
+          <input class="form__contacts form__contacts--input form__contacts--input-down" id="email" type="email"  pattern="[\x1F-\xBF]*{50}" name="email" placeholder="Введите почту *">
         </fieldset>
-        <fieldset class="form__type-appl-fieldset">
-          <label class="form__type-appl-header">С каким приложением путешествовали?</label>
-          <input class="form__input-ios form__type-appl-input" id="checked-field-pinkForiOS" type="radio" name="radio1" value="radioCheck1" checked>
-          <label class="form__ios-label" for="checked-field-pinkForiOS">Pink для iOS</label>
-          <input class="form__input-andriod  form__type-appl-input" id="checked-field-pinkForAndriod" type="radio" name="radio2" value="radioCheck2">
-          <label class="form__andriod-label" for="checked-field-pinkForAndriod">Pink на Android</label>
-          <input class="form__input-windows  form__type-appl-input" id="checked-field-pinkForWindows" type="radio" name="radio3" value="radioCheck3">
-          <label class="form__windows-label" for="checked-field-pinkForWindows">Windows Phone</label>
+        <fieldset class="form__appl-wrap">
+          <label class="form__header form__appl-header">С каким приложением путешествовали?</label>
+          <input class="form__appl form__appl--input  form__appl--input-down" type="radio" name="radio1" value="radioCheck1" checked>
+          <label class="form__appl form__appl--label" for="checked-field-pinkForiOS">Pink для iOS</label>
+          <input class="form__appl form__appl--input  form__appl--input-down" id="checked-field-pinkForAndriod" type="radio" name="radio2" value="radioCheck2">
+          <label class="form__appl form__appl--label" for="checked-field-pinkForAndriod">Pink на Android</label>
+          <input class="form__appl form__appl--input  form__appl--input-down" id="checked-field-pinkForWindows" type="radio" name="radio3" value="radioCheck3">
+          <label class="form__appl form__appl--label" for="checked-field-pinkForWindows">Windows Phone</label>
         </fieldset>
-        <fieldset class="form__emotions-fieldset">
-          <label class="form__emotions-label" for="textarea-field">ОПИШИТЕ СВОИ ЭМОЦИИ</label>
-          <textarea class="form__emotions-textarea" id="textarea-field" name="textarea-field" rows=5 maxlength=1000 placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          <input class="form__emotions-button form__emotions-button--down form__emotions-button--disabled" type="submit" value="ОТПРАВИТЬ">
-          <label class="form__emotions-stars">*</label>
-          <label class="form__emotions-requiredFields"> — обязательные поля</label>
+        <fieldset class="form__emotions-wrap">
+          <label class="form__header form__emotions-header" for="textarea-field">Опишите свои эмоции</label>
+          <textarea class="form__emotions form__emotions--textarea" id="textarea-field" name="textarea-field" rows=5 maxlength=1000 placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <input class="form__emotions form__emotions--input form__emotions--input-down form__emotions--input-disabled" type="submit" value="ОТПРАВИТЬ">
+          <label class="form__emotions form__emotions--label-stars">*</label>
+          <label class="form__emotions form__emotions--label-required-fields"> — обязательные поля</label>
         </fieldset>
       </form>
     </main>
     <footer class="page-footer logo">
-      <a href="/index.html" class="page-footer__pink-logo logo__pink-link logo__pink-link--down" title="PINK">PINK</a>
-      <div class="page-footer__social-wrap logo__social-wrap">
-        <a href="https://twitter.com/" class="page-footer__twitter-logo logo__social-link logo__social-link--down"  title="Твиттер" aria-label="Твиттер">Twitter</a>
-        <a href="https://www.facebook.com/" class="page-footer__facebook-logo logo__social-link logo__social-link--down" title="Фэйсбук" aria-label="Фэйсбук">Facebook</a>
-        <a href="https://www.youtube.com/" class="page-footer__youtube-logo logo__social-link logo__social-link--down" title="Ютюб" aria-label="Ютюб">YouTube</a>
+      <a href="/index.html" class="page-footer__pink-logo logo__pink-link logo__pink-link--down" aria-label="Переход на главную страницу">PINK</a>
+      <div class="page-footer__links-wrap">
+        <a href="https://twitter.com/" class="page-footer__link page-footer__link--down page-footer__link--twitter"  aria-label="Твиттер">Twitter</a>
+        <a href="https://www.facebook.com/" class="page-footer__link page-footer__link--down page-footer__link--facebook"  aria-label="Фэйсбук">Facebook</a>
+        <a href="https://www.youtube.com/" class="page-footer__link page-footer__link--down page-footer__link--youtube"  aria-label="Ютюб">YouTube</a>
       </div>
       <div class="page-footer__htmlacademy-wrap logo__htmlacademy-wrap">
         <p class="page-footer__htmlacademy-text">Разработано</p>
-        <a href="https://www.htmlacademy.ru/" class="page-footer__htmlacademy-link logo__htmlacademy-link logo__htmlacademy-link--down" title="HtmlAcademy" aria-label="HtmlAcademy">HtmlAcademy</a>
+        <a href="https://www.htmlacademy.ru/" class="page-footer__htmlacademy-link logo__htmlacademy-link logo__htmlacademy-link--down" aria-label="HtmlAcademy">HtmlAcademy</a>
       </div>
     </footer>
   </body>
