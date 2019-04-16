@@ -1,0 +1,22 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  height: 66px;
+}
+
+.page-header__logo-link {
+  background: url("/source/img/logo-pink-white-mobile.svg") no-repeat 10% 50%;
+}
+
+@media (min-width: 660px) {
+  .page-header {
+    width: auto;
+  }
+}
+@media (min-width: 960px) {
+  .page-header {
+    width: auto;
+  }
+}

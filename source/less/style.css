@@ -1,3 +1,25 @@
 body {
-  background: grey;
+  background-color: #ffffff;
+}
+.form__fieldset--achivements,
+.form__fieldset--appl-type {
+  background-color: #f2f2f2;
+}
+.info {
+  background-color: #f2f2f2;
+}
+.intro {
+  background-color: #1d2631;
+}
+.main-nav {
+  background-color: #283645;
+}
+.page-header {
+  background-color: rgba(29, 40, 50, 0.3);
+}
+.post__photo-review {
+  background-color: #f2f2f2;
+}
+.price {
+  background-color: #f2f2f2;
 }

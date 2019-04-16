@@ -1,0 +1,48 @@
+.price {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+
+  background-color: @bg-lightgrey;
+}
+
+.price__toggle {
+  margin: 0 3px 50px 3px;
+}
+
+.slider__property {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.slider {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.slider tr {
+  background-color: #ffffff;
+  border: 1px solid @tb-lightgrey;
+
+  &:first-child {
+    color: #ffffff;
+    background-color: @bg-darkgrey;
+  }
+}
+
+.slider th {
+  width: 276px;
+  height: 94px;
+  border: 2px solid @tb-lightgrey;
+}
+
+.slider td {
+  width: 276px;
+  height: 59px;
+  border: 2px solid @tb-lightgrey;
+}
