@@ -25,18 +25,3 @@
 .reviews__toggle {
   margin: 0 3px 50px 3px;
 }
-.slider-bullet {
-  height: 0;
-  border: none;
-}
-.slider-bullet::after {
-  display: flex;
-  justify-content: center;
-  content: "";
-  position: relative;
-  width: 6px;
-  height: 6px;
-  background-color: #bec2c7;
-  border-radius: 100%;
-  cursor: pointer;
-}
