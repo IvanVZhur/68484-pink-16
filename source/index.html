@@ -8,8 +8,8 @@
     </head>
     <body>
       <header class="page-header">
-        <a href="index.html" class="page-header__logo-link page-header__logo-link--no-opacity" aria-label="Переход на главную страницу"></a>
-        <nav class="main-nav main-nav--opened  main-nav--nojs">
+        <nav class="main-nav main-nav--opened main-nav--nojs">
+          <a href="index.html" class="main-nav__logo-link  main-nav--nojs main-nav__logo-link--opacity" aria-label="Переход на главную страницу"></a>
           <button class="main-nav__toggle" aria-label="Открыть меню" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -33,7 +33,7 @@
         <section class="intro">
           <h1 class="intro__header visually-hidden">Взгляните на жизнь иначе!</h1>
           <div class="intro__img-wrap">
-            <img class="intro__img intro__img--hand" src="/source/img/iphone-hand-mobile@1x.png" alt="Iphone в руке">
+            <img class="intro__img intro__img--hand" src="../source/img/iphone-hand-mobile@1x.png" alt="Iphone в руке">
           </div>
           <a href="https://www.apple.com/ru/itunes/" class="intro__download-link btn" aria-label="Скачать приложение">Скачать приложение</a>
           <div class="intro__links-wrap">
@@ -110,7 +110,7 @@
           </table>
           <p class="price__toggles slider-toggle">
             <button class="price__toggle slider-bullet" type="button"></button>
-            <button class="price__toggle slider-bullet" type="button"></button>
+            <button class="price__toggle slider-bqullet" type="button"></button>
             <button class="price__toggle slider-bullet" type="button"></button>
           </p>
         </section>
@@ -139,19 +139,20 @@
       <script>
           var navMain = document.querySelector('.main-nav');
           var navToggle = document.querySelector('.main-nav__toggle');
-          var navPageHeader = document.querySelector('.page-header__logo-link');
+          var navPageHeader = document.querySelector('.main-nav__logo-link');
 
           navMain.classList.remove('main-nav--nojs');
+          navPageHeader.classList.remove('main-nav--nojs');
 
           navToggle.addEventListener('click', function() {
             if (navMain.classList.contains('main-nav--closed')) {
-              navPageHeader.classList.remove('page-header__logo-link--no-opacity');
-              navPageHeader.classList.add('page-header__logo-link--opacity');
+              navPageHeader.classList.remove('main-nav__logo-link--no-opacity');
+              navPageHeader.classList.add('main-nav__logo-link--opacity');
               navMain.classList.remove('main-nav--closed');
               navMain.classList.add('main-nav--opened');
             } else {
-              navPageHeader.classList.add('page-header__logo-link--no-opacity');
-              navPageHeader.classList.remove('page-header__logo-link--opacity');
+              navPageHeader.classList.add('main-nav__logo-link--no-opacity');
+              navPageHeader.classList.remove('main-nav__logo-link--opacity');
               navMain.classList.add('main-nav--closed');
               navMain.classList.remove('main-nav--opened');
             }

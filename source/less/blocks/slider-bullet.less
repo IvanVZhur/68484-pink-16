@@ -1,18 +1,20 @@
 .slider-bullet {
   height: 0;
+
   border: none;
 }
 
 .slider-bullet::after {
+  position: relative;
+
   display: flex;
   justify-content: center;
-
-  content: "";
-  position: relative;
   width: 6px;
   height: 6px;
 
   background-color: #bec2c7;
   border-radius: 100%;
+
+  content: "";
   cursor: pointer;
 }

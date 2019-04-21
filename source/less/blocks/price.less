@@ -1,18 +1,14 @@
 .price {
   display: flex;
   flex-direction: column;
-
   margin: 0 auto;
 
   background-color: @bg-lightgrey;
 }
 
 .slider__property {
-  font-family: "OpenSans", "Arial", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
-  font-weight: normal;
-  font-style: normal;
 }
 
 .price__toggle {
@@ -22,16 +18,13 @@
 .slider {
   display: flex;
   flex-direction: column;
-
+  width: calc (3*276px);
   margin-left: -250px;
 
-  width: calc(3*276px);
   border-collapse: collapse;
 }
 
 .slider tr {
-
-
   background-color: #ffffff;
   border: 1px solid @tb-lightgrey;
 
@@ -42,7 +35,6 @@
 }
 
 .slider th {
-
   width: 276px;
   height: 94px;
 
@@ -54,27 +46,20 @@
 .slider td {
   width: 276px;
   height: 59px;
-
   padding-left: 22px;
 
   border: 2px solid @tb-lightgrey;
 }
 
-.slider  span {
-  display: none;
-}
-
-.slider__property--standart:after {
-  content: "";
+.slider__property--standart::after {
   position: absolute;
-/*   padding-left: 120px; */
 
   width: 21px;
   height: 31px;
 
-/*   background: url("/source/img/icon-yes.svg") no-repeat 50% 50%;
-  background-size: 50 50; */
-  border-right: 2px solid #f88e11;
-  border-bottom: 2px solid #f88e11;
+  border-right: 2px solid #3dc644;
+  border-bottom: 2px solid #3dc644;
   transform: rotate(45deg);
+
+  content: "";
 }
