@@ -7,86 +7,148 @@
   </head>
   <body>
     <header class="page-header">
-      <a href="index.html" class="page-header__logo-link page-header__logo-link--down" aria-label="Переход на главную страницу">PINK</a>
-      <nav class="main-nav main-nav--oppened">
-        <button class="main-nav__toggle" aria-label="Открыть меню" type="button">Открыть меню</button>
-        <ul class="main-nav__list">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <a href="index.html" class="main-nav__logo-link  main-nav--nojs main-nav__logo-link--opacity" aria-label="Переход на главную страницу"></a>
+        <button class="main-nav__toggle" aria-label="Открыть меню" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list site-list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--down" href="index.html" aria-label="Главная">Главная</a>
+            <a class="main-nav__link" href="index.html" aria-label="Главная">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--down" href="photo.html" aria-label="Фотографии">Фотографии</a>
+            <a class="main-nav__link" href="photo.html" aria-label="Фотографии">Фотографии</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--down" href="#" aria-label="Конкурс">Конкурс</a>
+            <a class="main-nav__link" href="#" aria-label="Конкурс">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--down" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTMLACADEMY">HTMLACADEMY</a>
+            <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTMLACADEMY">HTMLACADEMY</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main">
-      <h1 class="main_header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <h1 class="main__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <p class="main__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__user-name-wrap">
-          <label class="form__user-name form__user-name--label-surname form-label-header" for="surname">Фамилия:</label>
-          <input class="form__user-name form__user-name--input-surname form-input" type="text" id="surname" name="surname" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите фамилию *" required>
-          <label class="form__user-name form__user-name--label-name form-label-header" for="name">Имя:</label>
-          <input class="form__user-name form__user-name--input-name form-input" type="text" id="name" name="name" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите ваше имя *" required>
-          <label class="form__user-name form__user-name--label-patronymic form-label-header"  for="patronymic">Отчество:</label>
-          <input class="form__user-name form__user-name--input-patronymic form-input"  type="text" id="patronymic" name="patronymic" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Ну и отчество тоже">
+        <fieldset class="form__fieldset form__fieldset--about-user">
+          <legend class="visually-hidden">Имя пользователя</legend>
+          <ul class="form__fieldset-list">
+            <li class="form__fieldset-item">
+              <label class="form__label form__label--user-name" for="surname">Фамилия:</label>
+              <input class="form__input form__input--text" type="text" id="surname" name="surname" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите фамилию *" required>
+            </li>
+            <li class="form__fieldset-item">
+              <label class="form__label form__label--user-name" for="name">Имя:</label>
+              <input class="form__input form__input--text" type="text" id="name" name="name" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Укажите ваше имя *" required>
+            </li>
+            <li class="form__fieldset-item">
+              <label class="form__label form__label--user-name"  for="patronymic">Отчество:</label>
+              <input class="form__input form__input--text"  type="text" id="patronymic" name="patronymic" pattern="[A-Za-zА-Яа-яЁё]{30}" placeholder="Ну и отчество тоже">
+            </li>
+          </ul>
         </fieldset>
-        <fieldset class="form__achivements-wrap">
-          <label class="form__header form__achivements-header">Ваши безбашенные достижения в путешествии</label>
-          <input class="form__achivements form__achivements--input checkbox checkbox--down" id="checked-field-shark-selfy" type="checkbox" name="check1" value="check1" checked>
-          <label class="form__achivements form__achivements--label form-label-desc" for="checked-field-shark-selfy">Сделал селфи с акулой</label>
-          <input class="form__achivements form__achivements--input checkbox checkbox--down" id="checked-field-burnt" type="checkbox" name="check2" value="check2" checked>
-          <label class="form__achivements form__achivements--label form-label-desc" for="checked-field-burnt">Обгорел на пляже</label>
-          <input class="form__achivements form__achivements--input checkbox checkbox--down" id="checked-field-norris" type="checkbox" name="check3" value="check3">
-          <label class="form__achivements form__achivements--label form-label-desc" for="checked-field-norris">Видел Чака Норриса</label>
-          <input class="form__achivements form__achivements--input checkbox checkbox--down" id="checked-field-bought-souvenirs" type="checkbox" name="check4" value="check4">
-          <label class="form__achivements form__achivements--label form-label-desc" for="checked-field-bought-souvenirs">Накупил сувениров</label>
-          <input class="form__achivements form__achivements--input checkbox checkbox--down" id="checked-field-kept-tower" type="checkbox" name="check5" value="check5" checked>
-          <label class="form__achivements form__achivements--label form-label-desc" for="checked-field-kept-tower">Удержал башню</label>
-          <input class="form__achivements form__achivements--input checkbox checkbox--down" id="checked-field-trashed-hotel" type="checkbox" name="check6" value="check6">
-          <label class="form__achivements form__achivements--label form-label-desc" for="checked-field-trashed-hotel">Разгромил отель</label>
+        <fieldset class="form__fieldset form__fieldset--achivements">
+          <legend class="form__fieldset form__legend">Ваши безбашенные достижения в путешествии</legend>
+          <ul class="form__fieldset-list">
+            <li class="form__fieldset-item">
+              <input class="form__input form__input--checkbox" id="checked-field-shark-selfy" type="checkbox" name="check1" value="check1" checked>
+              <label class="form__label form__label--text" for="checked-field-shark-selfy">Сделал селфи с акулой</label>
+            </li>
+            <li class="form__fieldset-item">
+              <input class="form__input form__input--checkbox" id="checked-field-burnt" type="checkbox" name="check2" value="check2" checked>
+              <label class="form__label form__label--text" for="checked-field-burnt">Обгорел на пляже</label>
+            </li>
+            <li class="form__fieldset-item">
+              <input class="form__input form__input--checkbox" id="checked-field-norris" type="checkbox" name="check3" value="check3">
+              <label class="form__label form__label--text" for="checked-field-norris">Видел Чака Норриса</label>
+            </li>
+            <li class="form__fieldset-item">
+              <input class="form__input form__input--checkbox" id="checked-field-bought-souvenirs" type="checkbox" name="check4" value="check4">
+              <label class="form__label form__label--text" for="checked-field-bought-souvenirs">Накупил сувениров</label>
+            </li>
+            <li class="form__fieldset-item">
+              <input class="form__input form__input--checkbox" id="checked-field-kept-tower" type="checkbox" name="check5" value="check5" checked>
+              <label class="form__label form__label--text" for="checked-field-kept-tower">Удержал башню</label>
+            </li>
+            <li class="form__fieldset-item">
+              <input class="form__input form__input--checkbox" id="checked-field-trashed-hotel" type="checkbox" name="check6" value="check6">
+              <label class="form__label form__label--text" for="checked-field-trashed-hotel">Разгромил отель</label>
+            </li>
+          </ul>
         </fieldset>
-        <fieldset class="form__contacts-wrap">
-          <label class="form__contacts form__contacts--label form-label-header" for="telNumber">Номер телефона</label>
-          <input class="form__contacts form__contacts--input form-input" id="telNumber" type="tel" name="tel" pattern="^(8|\+7)[0-9]{7,10}" placeholder="Номер, пожалуйста">
-          <label class="form__contacts form__contacts--label form-label-header" for="email">Адрес почты</label>
-          <input class="form__contacts form__contacts--input form-input" id="email" type="email"  pattern="[\x1F-\xBF]*{50}" name="email" placeholder="Введите почту *">
+        <fieldset class="form__fieldset form__fieldset--contacts">
+          <legend class="visually-hidden">Контакты</legend>
+          <ul class="form__fieldset-list">
+            <li class="form__fieldset-item">
+              <label class="form__label form__label--contact" for="telNumber">Номер телефона</label>
+              <input class="form__input form__input--contact" id="telNumber" type="tel" name="tel" pattern="^(8|\+7)[0-9]{7,10}" placeholder="Номер, пожалуйста">
+            </li>
+            <li class="form__fieldset-item">
+              <label class="form__label form__label--contact" for="email">Адрес почты</label>
+              <input class="form__input form__input--contact" id="email" type="email"  pattern="[\x1F-\xBF]*{50}" name="email" placeholder="Введите почту *">
+            </li>
+          </ul>
         </fieldset>
-        <fieldset class="form__appl-wrap">
-          <label class="form__header form__appl-header">С каким приложением путешествовали?</label>
-          <input class="form__appl form__appl--input radio-button radio-button--down" id="checked-pink-ios"  type="radio" name="radio1" value="radioCheck1" checked>
-          <label class="form__appl form__appl--label form-label-desc" for="checked-pink-ios">Pink для iOS</label>
-          <input class="form__appl form__appl--input radio-button radio-button--down" id="checked-pink-andriod" type="radio" name="radio2" value="radioCheck2">
-          <label class="form__appl form__appl--label form-label-desc" for="checked-pink-andriod">Pink на Android</label>
-          <input class="form__appl form__appl--input radio-button radio-button--down" id="checked-pink-windows" type="radio" name="radio3" value="radioCheck3">
-          <label class="form__appl form__appl--label form-label-desc" for="checked-pink-windows">Windows Phone</label>
+        <fieldset class="form__fieldset form__fieldset--appl-type">
+          <legend class="form__fieldset form__legend">С каким приложением путешествовали?</legend>
+          <ul class="form__fieldset-list">
+            <li class="form__fieldset-item">
+              <input class="form__input form__input--radio-button" id="checked-pink-ios"  type="radio" name="radio1" value="radioCheck1" checked>
+              <label class="form__label form__label--text" for="checked-pink-ios">Pink для iOS</label>
+            </li>
+            <li class="form__fieldset-item">
+              <input class="form__input form__input--radio-button" id="checked-pink-android" type="radio" name="radio2" value="radioCheck2">
+              <label class="form__label form__label--text" for="checked-pink-android">Pink на Android</label>
+            </li>
+            <li class="form__fieldset-item">
+              <input class="form__input form__input--radio-button" id="checked-pink-windows" type="radio" name="radio3" value="radioCheck3">
+              <label class="form__label form__label--text" for="checked-pink-windows">Windows Phone</label>
+            </li>
+          </ul>
         </fieldset>
-        <fieldset class="form__emotions-wrap">
-          <label class="form__header form__emotions-header" for="textarea-field">Опишите свои эмоции</label>
-          <textarea class="form__emotions form__emotions--textarea" id="textarea-field" name="textarea-field" rows=5 maxlength=1000 placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          <input class="form__emotions form__emotions--input input-button input-button--down input-button--disabled" type="submit" value="ОТПРАВИТЬ">
-          <label class="form__emotions form__emotions--label-stars">*</label>
-          <label class="form__emotions form__emotions--label-required-fields"> — обязательные поля</label>
+        <fieldset class="form__fieldset form__fieldset--review">
+          <legend class="form__fieldset form__legend">Опишите свои эмоции</legend>
+          <textarea class="form__input form__input--textarea" id="textarea-field" name="textarea-field" rows=5 maxlength=1000 placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
+        <input class="form__input form__input--button" type="submit" value="ОТПРАВИТЬ">
+        <p class="form__text-required"><span>*</span> — обязательные поля</p>
       </form>
     </main>
-    <footer class="page-footer">
-      <a href="/index.html" class="page-footer__link page-footer__link--main-page logo-link logo-link--down" aria-label="Переход на главную страницу">PINK</a>
-      <div class="page-footer__link-wrap">
-        <a href="https://twitter.com/" class="page-footer__link page-footer__link--twitter social-link social-link--down"  aria-label="Твиттер">Twitter</a>
-        <a href="https://www.facebook.com/" class="page-footer__link page-footer__link--facebook social-link social-link--down"  aria-label="Фэйсбук">Facebook</a>
-        <a href="https://www.youtube.com/" class="page-footer__link page-footer__link--youtube social-link social-link--down"  aria-label="Ютюб">YouTube</a>
+    <footer class="footer">
+      <a href="/index.html" class="footer__link-main-page main-page-link" aria-label="Переход на главную страницу">PINK</a>
+      <div class="footer__link-wrap">
+        <a href="https://twitter.com/" class="footer__link social-link social-link--twitter"  aria-label="Твиттер">Twitter</a>
+        <a href="https://www.facebook.com/" class="footer__link social-link social-link--facebook"  aria-label="Фэйсбук">Facebook</a>
+        <a href="https://www.youtube.com/" class="footer__link social-link social-link--youtube"  aria-label="Ютюб">YouTube</a>
       </div>
-      <div class="page-footer__htmlacademy-wrap">
-        <p class="page-footer__htmlacademy-text">Разработано</p>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link page-footer__link--htmlacademy htmlacademy-link htmlacademy-link--down" aria-label="HtmlAcademy">HtmlAcademy</a>
+      <div class="footer__htmlacademy-wrap">
+        <p class="footer__htmlacademy-text">Разработано</p>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link-htmlacademy htmlacademy-link" aria-label="HtmlAcademy">HtmlAcademy</a>
       </div>
     </footer>
+    <script>
+        var navMain = document.querySelector('.main-nav');
+        var navToggle = document.querySelector('.main-nav__toggle');
+        var navPageHeader = document.querySelector('.main-nav__logo-link');
+
+        navMain.classList.remove('main-nav--nojs');
+        navPageHeader.classList.remove('main-nav--nojs');
+
+        navToggle.addEventListener('click', function() {
+          if (navMain.classList.contains('main-nav--closed')) {
+            navPageHeader.classList.remove('main-nav__logo-link--no-opacity');
+            navPageHeader.classList.add('main-nav__logo-link--opacity');
+            navMain.classList.remove('main-nav--closed');
+            navMain.classList.add('main-nav--opened');
+          } else {
+            navPageHeader.classList.add('main-nav__logo-link--no-opacity');
+            navPageHeader.classList.remove('main-nav__logo-link--opacity');
+            navMain.classList.add('main-nav--closed');
+            navMain.classList.remove('main-nav--opened');
+          }
+        });
+      </script>
   </body>
 </html>

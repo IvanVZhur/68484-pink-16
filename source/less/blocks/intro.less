@@ -1,0 +1,67 @@
+.intro {
+  position: relative;
+  top: -132px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #1d2631 url("/source/img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
+}
+
+.intro__img-wrap {
+  z-index: 1;
+
+  margin-top: 175px;
+}
+
+.intro__download-link {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.intro__links-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.intro__link {
+  width: 60px;
+  height: 60px;
+  margin: 0 15px;
+
+  font: 0/0;      /* https://web-standards.ru/articles/css-image-replacement/ */
+  text-shadow: none;
+  color: transparent;
+
+  background-repeat: no-repeat;
+
+  &--apple-store {
+    background-image: url("/source/img/logo-apple.svg");
+    background-position: 50% 50%;
+    background-size: 47 56;
+  }
+
+  &--android-store {
+    background-image: url("/source/img/logo-android.svg");
+    background-position: 50% 70%;
+    background-size: 43 47;
+  }
+
+  &--windows-store {
+    background-image: url("/source/img/logo-microsoft.svg");
+    background-position: 50% 70%;
+    background-size: 44 41;
+  }
+}
+
+.intro__available-text {
+  width: 240px;
+  margin-top: 20px;
+
+  .font-light-small;
+  color: #ffffff;
+}
