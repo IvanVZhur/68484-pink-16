@@ -18,7 +18,17 @@
   font-weight: @font-weight-bold;
 }
 
-.container {
-  width: 280px;
+.font-normal-small {
+  font-size: 14px;
+  font-weight: @font-weight-normal;
+}
+
+.font-normal-verysmall {
+  font-size: 12px;
+  font-weight: @font-weight-normal;
+}
+
+.container(@width: 250px) {
+  width: @width;
   margin: 0 auto;
 }
