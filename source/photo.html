@@ -9,10 +9,12 @@
   <body>
     <header class="page-header">
       <nav class="main-nav main-nav--opened main-nav--nojs">
-        <a href="index.html" class="main-nav__logo-link  main-nav--nojs main-nav__logo-link--opacity" aria-label="Переход на главную страницу"></a>
-        <button class="main-nav__toggle" aria-label="Открыть меню" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <div class="main-nav__header-wrap main-nav--nojs main-nav__header-wrap--opacity">
+          <a href="index.html" class="main-nav__logo-link" aria-label="Переход на главную страницу"></a>
+          <button class="main-nav__toggle" aria-label="Открыть меню" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <ul class="main-nav__list site-list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html" aria-label="Главная">Главная</a>
@@ -30,13 +32,18 @@
       </nav>
     </header>
     <main>
-      <h1 class="main__header">Фотографии пользователей</h1>
+      <div class="main-shift main-shift--opened"></div>
+      <section class="posts-intro">
+        <div class="posts-intro posts-intro__header-wrap">
+          <h1 class="posts-intro posts-intro--header">Фотографии пользователей</h1>
+        </div>
+        <p class="posts-intro posts-intro--text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      </section>
       <section class="posts">
-        <h2 class="posts__header-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
         <article class="post">
           <figure class="post__img-wrap">
             <a class="post__img-link" href="#">
-              <img class="post__img" src="/source/img/panorama-mobile@1x.jpg" alt="Фото Анны">
+              <img class="post__img post__img--panorama-of-day" src="/img/panorama-mobile@1x.jpg" alt="Фото Анны">
             </a>
           </figure>
           <div class="post__photo-review">
@@ -54,7 +61,7 @@
         <article class="post">
           <figure class="post__img-wrap">
             <a class="post__img-link" href="#">
-              <img class="post__img" src="/source/img/photo-car-mobile@1x.jpg" alt="Фото Левона">
+              <img class="post__img" src="/img/photo-car-mobile@1x.jpg" alt="Фото Левона">
             </a>
           </figure>
           <div class="post__photo-review">
@@ -72,7 +79,7 @@
         <article class="post">
           <figure class="post__img-wrap">
             <a class="post__img-link" href="#">
-              <img class="post__img" src="/source/img/photo-drumset-mobile@1x.jpg" alt="Фото Антона">
+              <img class="post__img" src="/img/photo-drumset-mobile@1x.jpg" alt="Фото Антона">
             </a>
           </figure>
           <div class="post__photo-review">
@@ -90,7 +97,7 @@
         <article class="post">
           <figure class="post__img-wrap">
             <a class="post__img-link" href="#">
-              <img class="post__img" src="/source/img/photo-window-mobile@1x.jpg" alt="Фото Бориса">
+              <img class="post__img" src="/img/photo-window-mobile@1x.jpg" alt="Фото Бориса">
             </a>
           </figure>
           <div class="post__photo-review">
@@ -108,7 +115,7 @@
         <article class="post">
           <figure class="post__img-wrap">
             <a class="post__img-link" href="#">
-              <img class="post__img" src="/source/img/photo-fair-mobile@1x.jpg" alt="Фото Сергея">
+              <img class="post__img" src="/img/photo-fair-mobile@1x.jpg" alt="Фото Сергея">
             </a>
           </figure>
           <div class="post__photo-review">
@@ -126,7 +133,7 @@
         <article class="post">
           <figure class="post__img-wrap">
             <a class="post__img-link" href="#">
-              <img class="post__img" src="/source/img/photo-pov-mobile@1x.jpg" alt="Фото Максима">
+              <img class="post__img" src="/img/photo-pov-mobile@1x.jpg" alt="Фото Максима">
             </a>
           </figure>
           <div class="post__photo-review">
@@ -144,7 +151,7 @@
         <article class="post">
           <figure class="post__img-wrap">
             <a href="#">
-              <img class="post__img" src="/source/img/photo-wing-mobile@1x.jpg" alt="Фото Надежды">
+              <img class="post__img" src="/img/photo-wing-mobile@1x.jpg" alt="Фото Надежды">
             </a>
           </figure>
           <div class="post__photo-review">
@@ -163,7 +170,7 @@
       <section class="upload">
         <h2 class=" ">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
         <div class="upload__photo-wrap">
-          <img class="upload__photo" src="/source/img/photo-road-mobile@1x.jpg" alt="Фото для поста">
+          <img class="upload__photo" src="/img/photo-road-mobile@1x.jpg" alt="Фото для поста">
         </div>
         <div class="upload__toggle-wrap">
           <button class="upload__toggle upload__toggle--crop">Обрезка</button>
@@ -194,22 +201,31 @@
     <script>
         var navMain = document.querySelector('.main-nav');
         var navToggle = document.querySelector('.main-nav__toggle');
-        var navPageHeader = document.querySelector('.main-nav__logo-link');
+        var navPageHeader = document.querySelector('.main-nav__header-wrap');
+        var MainShift = document.querySelector('.main-shift');
 
         navMain.classList.remove('main-nav--nojs');
         navPageHeader.classList.remove('main-nav--nojs');
+        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add('main-nav--closed');
+        MainShift.classList.add('main-shift--closed');
+        MainShift.classList.remove('main-shift--opened');
 
         navToggle.addEventListener('click', function() {
           if (navMain.classList.contains('main-nav--closed')) {
-            navPageHeader.classList.remove('main-nav__logo-link--no-opacity');
-            navPageHeader.classList.add('main-nav__logo-link--opacity');
+            navPageHeader.classList.remove('main-nav__header-wrap--no-opacity');
+            navPageHeader.classList.add('main-nav__header-wrap--opacity');
             navMain.classList.remove('main-nav--closed');
             navMain.classList.add('main-nav--opened');
+            MainShift.classList.remove('main-shift--closed');
+            MainShift.classList.add('main-shift--opened');
           } else {
-            navPageHeader.classList.add('main-nav__logo-link--no-opacity');
-            navPageHeader.classList.remove('main-nav__logo-link--opacity');
+            navPageHeader.classList.add('main-nav__header-wrap--no-opacity');
+            navPageHeader.classList.remove('main-nav__header-wrap--opacity');
             navMain.classList.add('main-nav--closed');
             navMain.classList.remove('main-nav--opened');
+            MainShift.classList.add('main-shift--closed');
+            MainShift.classList.remove('main-shift--opened');
           }
         });
       </script>

@@ -1,6 +1,16 @@
-.form__fieldset--achivements,
-.form__fieldset--appl-type {
-  background-color: red;
+.form__fieldset {
+  border: none;
+
+  .container(280px);
+
+  &--achivements,
+  &--appl-type {
+    background-color: @bg-lightgrey;
+  }
+
+  &--about-user {
+    color: @hover-color;
+  }
 }
 
 .form__fieldset-list {
@@ -8,7 +18,37 @@
 }
 
 .form__label {
-  &--user-name {
+  &--user-name,
+  &--contact {
     text-transform: uppercase;
+    color: @hover-color;
+
+    .font-normal-small;
   }
+}
+
+.form__legend {
+  text-transform: uppercase;
+  color: @hover-color;
+
+  .font-normal-small;
+}
+
+input[placeholder],
+textarea[placeholder] {
+  .font-normal-medium;
+}
+
+.form__text-required {
+  text-transform: uppercase;
+
+  .font-normal-small;
+}
+
+.form__text-required span {
+  color: @hover-color;
+}
+
+.form__input {
+  .container(280px);
 }

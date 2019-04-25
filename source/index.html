@@ -3,16 +3,18 @@
   <head>
     <title>HTML Academy: Пинк</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="/source/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <nav class="main-nav main-nav--opened main-nav--nojs">
-        <a href="index.html" class="main-nav__logo-link  main-nav--nojs main-nav__logo-link--opacity" aria-label="Переход на главную страницу"></a>
-        <button class="main-nav__toggle" aria-label="Открыть меню" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <div class="main-nav__header-wrap main-nav--nojs main-nav__header-wrap--opacity">
+          <a href="#" class="main-nav__logo-link" aria-label="Переход на главную страницу"></a>
+          <button class="main-nav__toggle" aria-label="Открыть меню" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <ul class="main-nav__list site-list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="#" aria-label="Главная">Главная</a>
@@ -30,10 +32,11 @@
       </nav>
     </header>
     <main  class="main">
+      <div class="main-shift main-shift--opened"></div>
       <section class="intro">
         <h1 class="intro__header visually-hidden">Взгляните на жизнь иначе!</h1>
         <div class="intro__img-wrap">
-          <img class="intro__img intro__img--hand" src="../source/img/iphone-hand-mobile@1x.png" alt="Iphone в руке">
+          <img class="intro__img intro__img--hand" src="/img/iphone-hand-mobile@1x.png" alt="Iphone в руке">
         </div>
         <a href="https://www.apple.com/ru/itunes/" class="intro__download-link btn" aria-label="Скачать приложение">Скачать приложение</a>
         <div class="intro__links-wrap">
@@ -79,7 +82,7 @@
           </blockquote>
         </div>
         <p class="reviews__toggles">
-          <button class="reviews__toggle slider-bullet" type="button"></button>
+          <button class="reviews__toggle slider-bullet slider-bullet--active" type="button"></button>
           <button class="reviews__toggle slider-bullet" type="button"></button>
           <button class="reviews__toggle slider-bullet" type="button"></button>
         </p>
@@ -88,29 +91,38 @@
         <h2 class="price__header visually-hidden">Цены</h2>
         <table class="slider">
           <tr class="slider__header-wrap">
-            <th class="slider__header slider__header--basis">База 1,99 USD</th>
-            <th class="slider__header slider__header--standart">Стандарт 3,99 USD</th>
-            <th class="slider__header slider__header--unlimited">Анлим 9,99 USD</th>
+            <th class="slider__header slider__header--basis slider__header--squeezed">
+              <p class="slider__header slider__header--desc">База</p>
+              <p class="slider__header slider__header--price">1,99 USD</p>
+            </th>
+            <th class="slider__header slider__header--standart slider__header--extended">
+              <p class="slider__header slider__header--desc">Стандарт</p>
+              <p class="slider__header slider__header--price">3,99 USD</p>
+            </th>
+            <th class="slider__header slider__header--unlimited slider__header--squeezed">
+              <p class="slider__header slider__header--desc">Анлим</p>
+              <p class="slider__header slider__header--price">9,99 USD</p>
+            </th>
           </tr>
           <tr class="slider__row-wrap slider__property">
-            <td class="slider__property slider__property--basis">Розовый фильтр <span>Да</span></td>
-            <td class="slider__property slider__property--standart">Розовый фильтр <span>Да</span></td>
-            <td class="slider__property slider__property--unlimited">Розовый фильтр <span>Да</span></td>
+            <td class="slider__property slider__property--basis slider__property--squeezed">Розовый фильтр<span class="slider__row-wrap slider__row-wrap--yes"> Да</span></td>
+            <td class="slider__property slider__property--standart slider__property--extended">Розовый фильтр<span class="slider__row-wrap slider__row-wrap--yes"> Да</span></td>
+            <td class="slider__property slider__property--unlimited slider__property--squeezed">Розовый фильтр<span class="slider__row-wrap slider__row-wrap--yes"> Да</span></td>
           </tr>
           <tr class="slider__row-wrap slider__property">
-            <td class="slider__property slider__property--basis">Смайлики Нет</td>
-            <td class="slider__property slider__property--standart">Смайлики Да</td>
-            <td class="slider__property slider__property--unlimited">Смайлики Да</td>
+            <td class="slider__property slider__property--basis slider__property--squeezed">Смайлики<span class="slider__row-wrap slider__row-wrap--no"> Нет</span></td>
+            <td class="slider__property slider__property--standart slider__property--extended">Смайлики<span class="slider__row-wrap slider__row-wrap--yes"> Да</span></td>
+            <td class="slider__property slider__property--unlimited slider__property--squeezed">Смайлики<span class="slider__row-wrap slider__row-wrap--yes"> Да</span></td>
           </tr>
           <tr class="slider__row-wrap slider__property">
-            <td class="slider__property slider__property--basis">Комментарии Нет</td>
-            <td class="slider__property slider__property--standart">Комментарии Нет</td>
-            <td class="slider__property slider__property--unlimited">Комментарии Да</td>
+            <td class="slider__property slider__property--basis slider__property--squeezed">Комментарии<span class="slider__row-wrap slider__row-wrap--no"> Нет</span></td>
+            <td class="slider__property slider__property--standart slider__property--extended">Комментарии<span class="slider__row-wrap slider__row-wrap--no"> Нет</span></td>
+            <td class="slider__property slider__property--unlimited slider__property--squeezed">Комментарии<span class="slider__row-wrap slider__row-wrap--yes"> Да</span></td>
           </tr>
         </table>
         <p class="price__toggles slider-toggle">
           <button class="price__toggle slider-bullet" type="button"></button>
-          <button class="price__toggle slider-bqullet" type="button"></button>
+          <button class="price__toggle slider-bullet slider-bullet--active" type="button"></button>
           <button class="price__toggle slider-bullet" type="button"></button>
         </p>
       </section>
@@ -139,22 +151,31 @@
     <script>
         var navMain = document.querySelector('.main-nav');
         var navToggle = document.querySelector('.main-nav__toggle');
-        var navPageHeader = document.querySelector('.main-nav__logo-link');
+        var navPageHeader = document.querySelector('.main-nav__header-wrap');
+        var MainShift = document.querySelector('.main-shift');
 
         navMain.classList.remove('main-nav--nojs');
         navPageHeader.classList.remove('main-nav--nojs');
+        navMain.classList.remove('main-nav--opened');
+        navMain.classList.add('main-nav--closed');
+        MainShift.classList.add('main-shift--closed');
+        MainShift.classList.remove('main-shift--opened');
 
         navToggle.addEventListener('click', function() {
           if (navMain.classList.contains('main-nav--closed')) {
-            navPageHeader.classList.remove('main-nav__logo-link--no-opacity');
-            navPageHeader.classList.add('main-nav__logo-link--opacity');
+            navPageHeader.classList.remove('main-nav__header-wrap--no-opacity');
+            navPageHeader.classList.add('main-nav__header-wrap--opacity');
             navMain.classList.remove('main-nav--closed');
             navMain.classList.add('main-nav--opened');
+            MainShift.classList.remove('main-shift--closed');
+            MainShift.classList.add('main-shift--opened');
           } else {
-            navPageHeader.classList.add('main-nav__logo-link--no-opacity');
-            navPageHeader.classList.remove('main-nav__logo-link--opacity');
+            navPageHeader.classList.add('main-nav__header-wrap--no-opacity');
+            navPageHeader.classList.remove('main-nav__header-wrap--opacity');
             navMain.classList.add('main-nav--closed');
             navMain.classList.remove('main-nav--opened');
+            MainShift.classList.add('main-shift--closed');
+            MainShift.classList.remove('main-shift--opened');
           }
         });
       </script>
