@@ -1,4 +1,15 @@
-.posts__header-text {
-  .container;
-  .font-normal-small;
+.posts {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+
+  &__text {
+    flex-direction: row;
+    align-items: center;
+    min-height: 160px;
+    padding: 0px 10px;
+
+    .container(250px);
+    .font-normal-small;
+  }
 }

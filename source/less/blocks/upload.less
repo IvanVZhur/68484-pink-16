@@ -1,3 +1,55 @@
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
 .upload__text {
+  padding: 50px 20px;
+
+  .container(210px);
   .font-normal-small;
+}
+
+.upload__photo-wrap {
+  background-color: @bg-lightgrey;
+}
+
+.upload__photo {
+  margin: 20px auto;
+}
+
+.upload__toggle-wrap {
+  background-color: @bg-lightgrey;
+}
+
+.upload__scale-bar {
+  width: 240px;
+  margin: 20px auto;
+
+  border-top: 2px solid @bg-darkgrey;
+}
+
+.upload__pin {
+  position: relative;
+  top: -10px;
+  left: 205px;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: @bg-lightgrey;
+
+  border: 2px solid @hover-color;
+  border-radius: 50%;
+}
+
+.upload__button-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: @bg-lightgrey;
+
+  border-top: 1px solid rgba(0,0,0,0.07);
 }

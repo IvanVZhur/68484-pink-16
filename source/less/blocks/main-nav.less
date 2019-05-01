@@ -4,7 +4,7 @@
 }
 
 .main-nav__header-wrap {
-  z-index: 10;
+  z-index: 12;
 
   display: flex;
   flex-direction: row;
@@ -12,12 +12,10 @@
   align-items: center;
   height: 69px;
 
+  background-color: @bg-darkgrey;
+
   &--no-opacity {
     background-color: @bg-header;
-  }
-
-  &--opacity {
-    background-color: @bg-darkgrey;
   }
 }
 
@@ -53,16 +51,12 @@
 }
 
 .main-nav__list {
-  z-index: 10;
-
   display: flex;
   flex-direction: column;
-  height: 100%;
-  margin-top: 0;
-  margin-left: 0;
-  padding-left: 0;
 
   background-color: @bg-darkgrey;
+
+  .reset-indent;
 }
 
 .main-nav__item {
@@ -100,7 +94,8 @@
 }
 
 .main-nav--opened .main-nav__list {
-  display: flex;
+  position: relative;
+  z-index: 12;
 }
 
 .main-nav--nojs .main-nav__toggle {

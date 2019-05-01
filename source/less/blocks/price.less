@@ -6,9 +6,15 @@
   background-color: @bg-lightgrey;
 }
 
+.price__wrapper {
+  overflow: hidden;
+
+  .container(320px);
+}
+
 .slider {
   width: 276px;
-  margin-left: -250px;
+  margin-left: -260px;
 
   text-transform: uppercase;
 
@@ -36,6 +42,7 @@
 }
 
 .slider__property {
+  width: 276px;
   height: 59px;
   padding-left: 22px;
 
@@ -43,6 +50,18 @@
   text-align: left;
 
   border: 2px solid @tb-lightgrey;
+
+  &--rose-filter::after {
+    left: 85px;
+  }
+
+  &--smiles::after {
+    left: 135px;
+  }
+
+  &--comments::after {
+    left: 105px;
+  }
 }
 
 .slider tr {
@@ -62,9 +81,12 @@
 .slider__row-wrap {
   &--yes::after {
     content: "111";
+    position: relative;
 
     width: 20px;
     height: 20px;
+
+    color: transparent;
 
     background-image: url("../img/icon-yes.svg");
     background-repeat: no-repeat;
@@ -73,9 +95,12 @@
 
   &--no::after {
     content: "111";
+    position: relative;
 
     width: 20px;
     height: 20px;
+
+    color: transparent;
 
     background-image: url("../img/icon-no.svg");
     background-repeat: no-repeat;
@@ -84,19 +109,8 @@
 }
 
 .slider span {
+  display: none;
   color: transparent;
-}
-
-.slider__row-wrap:nth-child(2) span {
-  padding-left: 65px;
-}
-
-.slider__row-wrap:nth-child(3) span {
-  padding-left: 115px;
-}
-
-.slider__row-wrap:last-child span {
-  padding-left: 80px;
 }
 
 .price__toggle {

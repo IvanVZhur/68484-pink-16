@@ -1,0 +1,25 @@
+.upload__toggle {
+  width: 60px;
+  height: 60px;
+  margin: 8px 15px 8px 15px;
+  font: 0/0;
+  text-shadow: none;
+  color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+}
+.upload__toggle--crop {
+  background-image: url("../img/icon-editor-crop.svg");
+  background-position: 50% 50%;
+  background-size: 44px 44px;
+}
+.upload__toggle--fill {
+  background-image: url("../img/icon-editor-fill.svg");
+  background-position: 50% 50%;
+  background-size: 48px 43px;
+}
+.upload__toggle--contrast {
+  background-image: url("../img/icon-editor-contrast.svg");
+  background-position: 50% 50%;
+  background-size: 32px 32px;
+}
