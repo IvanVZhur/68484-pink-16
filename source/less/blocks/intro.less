@@ -1,0 +1,74 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: @bg-page-header;
+}
+
+.intro__download-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+
+  text-align: center;
+  color: #ffffff;
+
+  border: 3px solid #ffffff;
+
+  &:hover {
+    color: @hover-color;
+
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: @active-color;
+
+    background-color: #ffffff;
+  }
+}
+
+.intro__links-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.intro__link {
+  width: 60px;
+  height: 60px;
+  margin: 0 15px;
+
+  background-repeat: no-repeat;
+
+  .reset-text-for-links;
+
+  &--apple-store {
+    background-image: url("../img/logo-apple.svg");
+    background-position: 50% 50%;
+    background-size: 47px 56px;
+  }
+
+  &--android-store {
+    background-image: url("../img/logo-android.svg");
+    background-position: 50% 70%;
+    background-size: 43px 47px;
+  }
+
+  &--windows-store {
+    background-image: url("../img/logo-microsoft.svg");
+    background-position: 50% 70%;
+    background-size: 44px 41px;
+  }
+}
+
+.intro__available-text {
+  width: 240px;
+  margin-top: 20px;
+
+  color: #ffffff;
+  .font-light-small;
+}
