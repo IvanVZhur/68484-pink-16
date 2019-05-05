@@ -1,0 +1,29 @@
+.form-btn {
+  width: 296px;
+  min-height: 59px;
+  padding: 0 20px;
+
+  color: @form-btn-normal-color;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: @bg-form-btn-normal;
+  border: none;
+  border-radius: 2px;
+
+  .font-bold-medium;
+
+  &:hover {
+    background-color: @bg-form-btn-hover;
+  }
+
+  &:active {
+    color: @form-btn-active-color;
+
+    background-color: @bg-form-btn-down;
+  }
+
+  &:disabled {
+    background-color: @bg-form-btn-disabled;
+  }
+}
