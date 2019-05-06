@@ -3,17 +3,31 @@
   flex-direction: column;
   align-items: center;
 
-  background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0%;
-}
-
-.intro__img-wrap {
-  margin-top: 175px;
+  background-color: @bg-page-header;
 }
 
 .intro__download-link {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 25px;
+
+  text-align: center;
+  color: #ffffff;
+
+  border: 3px solid #ffffff;
+
+  &:hover {
+    color: @hover-color;
+
+    background-color: #ffffff;
+  }
+
+  &:active {
+    color: @active-color;
+
+    background-color: #ffffff;
+  }
 }
 
 .intro__links-wrap {
@@ -28,11 +42,9 @@
   height: 60px;
   margin: 0 15px;
 
-  font: 0/0;
-  text-shadow: none;
-  color: transparent;
-
   background-repeat: no-repeat;
+
+  .reset-text-for-links;
 
   &--apple-store {
     background-image: url("../img/logo-apple.svg");
@@ -58,6 +70,5 @@
   margin-top: 20px;
 
   color: #ffffff;
-
   .font-light-small;
 }

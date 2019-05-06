@@ -1,45 +1,115 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #ffffff;
+
+  &__text {
+    flex-direction: row;
+    align-items: center;
+    min-height: 160px;
+    padding: 0 10px;
+
+    .container(280px);
+    .font-normal-small;
+  }
+}
+
+.form__legend {
+  position: relative;
+  top: 60px;
+
+  width: 250px;
+  margin: 0 auto 87px auto;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: @hover-color;
+
+  .font-normal-small;
+
+  &--review {
+    position: static;
+
+    margin-bottom: 10px;
+  }
+}
+
+.form__fieldset-item {
+  margin-bottom: 12px;
+}
+
 .form__fieldset {
-  border: none;
+  border: 0 none;
 
-  .container(280px);
+  &--achivements {
+    margin-bottom: 30px;
 
-  &--achivements,
+    background-color: @bg-lightgrey;
+  }
+
   &--appl-type {
+    margin-bottom: 35px;
+
     background-color: @bg-lightgrey;
   }
 
   &--about-user {
     color: @hover-color;
   }
+
+  &--review {
+    position: static;
+
+    margin: 0 auto 45px auto;
+  }
+
+  &--contacts .form__fieldset-item:first-child {
+    margin-bottom: 24px;
+  }
+
+  &--appl-type .form__fieldset-item {
+    margin-bottom: 40px;
+  }
 }
 
 .form__fieldset-list {
-  list-style: none;
+  padding: 0 10px;
+
+  list-style-type: none;
+
+  .container(280px);
 }
 
 .form__label {
   &--user-name,
   &--contact {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    margin-left: 20px;
+
     text-transform: uppercase;
     color: @hover-color;
 
     .font-normal-small;
   }
-}
 
-.form__legend {
-  text-transform: uppercase;
-  color: @hover-color;
-
-  .font-normal-small;
+  &--text-checkbox,
+  &--text-radio-button {
+    .font-normal-medium;
+  }
 }
 
 input[placeholder],
 textarea[placeholder] {
+  padding: 0 20px;
   .font-normal-medium;
 }
 
 .form__text-required {
+  margin-top: 40px;
+
   text-transform: uppercase;
 
   .font-normal-small;
@@ -47,8 +117,4 @@ textarea[placeholder] {
 
 .form__text-required span {
   color: @hover-color;
-}
-
-.form__input {
-  .container(280px);
 }

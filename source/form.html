@@ -30,14 +30,15 @@
           </li>
         </ul>
       </nav>
+      <div class="page-header__img-wrap">
+        <h1 class="page-header__header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </div>
     </header>
     <main class="main">
-      <div class="main-shift main-shift--opened"></div>
-      <section class="posts-intro">
-        <div class="posts-intro posts-intro__header-wrap">
-          <h1 class="posts-intro posts-intro--header">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      <section class="form-intro">
+        <div class="form form__text-wrap">
+          <p class="form form__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
         </div>
-        <p class="posts-intro posts-intro--text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
       </section>
       <p class="visually-hidden">Пожалуйста, заполните форму ниже:</p>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
@@ -63,27 +64,27 @@
           <ul class="form__fieldset-list">
             <li class="form__fieldset-item">
               <input class="form__input form__input--checkbox" id="checked-field-shark-selfy" type="checkbox" name="check1" value="check1" checked>
-              <label class="form__label form__label--text" for="checked-field-shark-selfy">Сделал селфи с акулой</label>
+              <label class="form__label form__label--text-checkbox" for="checked-field-shark-selfy">Сделал селфи с акулой</label>
             </li>
             <li class="form__fieldset-item">
               <input class="form__input form__input--checkbox" id="checked-field-burnt" type="checkbox" name="check2" value="check2" checked>
-              <label class="form__label form__label--text" for="checked-field-burnt">Обгорел на пляже</label>
+              <label class="form__label form__label--text-checkbox" for="checked-field-burnt">Обгорел на пляже</label>
             </li>
             <li class="form__fieldset-item">
               <input class="form__input form__input--checkbox" id="checked-field-norris" type="checkbox" name="check3" value="check3">
-              <label class="form__label form__label--text" for="checked-field-norris">Видел Чака Норриса</label>
+              <label class="form__label form__label--text-checkbox" for="checked-field-norris">Видел Чака Норриса</label>
             </li>
             <li class="form__fieldset-item">
               <input class="form__input form__input--checkbox" id="checked-field-bought-souvenirs" type="checkbox" name="check4" value="check4">
-              <label class="form__label form__label--text" for="checked-field-bought-souvenirs">Накупил сувениров</label>
+              <label class="form__label form__label--text-checkbox" for="checked-field-bought-souvenirs">Накупил сувениров</label>
             </li>
             <li class="form__fieldset-item">
               <input class="form__input form__input--checkbox" id="checked-field-kept-tower" type="checkbox" name="check5" value="check5" checked>
-              <label class="form__label form__label--text" for="checked-field-kept-tower">Удержал башню</label>
+              <label class="form__label form__label--text-checkbox" for="checked-field-kept-tower">Удержал башню</label>
             </li>
             <li class="form__fieldset-item">
               <input class="form__input form__input--checkbox" id="checked-field-trashed-hotel" type="checkbox" name="check6" value="check6">
-              <label class="form__label form__label--text" for="checked-field-trashed-hotel">Разгромил отель</label>
+              <label class="form__label form__label--text-checkbox" for="checked-field-trashed-hotel">Разгромил отель</label>
             </li>
           </ul>
         </fieldset>
@@ -104,26 +105,36 @@
           <legend class="form__fieldset form__legend">С каким приложением путешествовали?</legend>
           <ul class="form__fieldset-list">
             <li class="form__fieldset-item">
-              <input class="form__input form__input--radio-button" id="checked-pink-ios"  type="radio" name="radio1" value="radioCheck1" checked>
-              <label class="form__label form__label--text" for="checked-pink-ios">Pink для iOS</label>
+              <input class="form__input form__input--radio-button" id="checked-pink-ios"  type="radio" name="radio" value="radioCheck1" checked>
+              <label class="form__label form__label--text-radio-button" for="checked-pink-ios">Pink для iOS</label>
             </li>
             <li class="form__fieldset-item">
-              <input class="form__input form__input--radio-button" id="checked-pink-android" type="radio" name="radio2" value="radioCheck2">
-              <label class="form__label form__label--text" for="checked-pink-android">Pink на Android</label>
+              <input class="form__input form__input--radio-button" id="checked-pink-android" type="radio" name="radio" value="radioCheck2">
+              <label class="form__label form__label--text-radio-button" for="checked-pink-android">Pink на Android</label>
             </li>
             <li class="form__fieldset-item">
-              <input class="form__input form__input--radio-button" id="checked-pink-windows" type="radio" name="radio3" value="radioCheck3">
-              <label class="form__label form__label--text" for="checked-pink-windows">Windows Phone</label>
+              <input class="form__input form__input--radio-button" id="checked-pink-windows" type="radio" name="radio" value="radioCheck3">
+              <label class="form__label form__label--text-radio-button" for="checked-pink-windows">Windows Phone</label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--review">
-          <legend class="form__fieldset form__legend">Опишите свои эмоции</legend>
+          <legend class="form__fieldset form__legend form__legend--review">Опишите свои эмоции</legend>
           <textarea class="form__input form__input--textarea" id="textarea-field" name="textarea-field" rows=5 maxlength=1000 placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
-        <input class="form__input form__input--button" type="submit" value="ОТПРАВИТЬ">
+        <input class="form__input form-btn form-btn--send" type="submit" value="ОТПРАВИТЬ">
         <p class="form__text-required"><span>*</span> — обязательные поля</p>
       </form>
+      <section class="sended-form modal-window visually-hidden">
+        <h2 class="sended-form__header modal-window">Ваша заявка отправлена</h2>
+        <p class="sended-form__text modal-window">Спасибо за ваше участие, ваша заяка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
+        <button class="sended-form__button form-btn form-btn--close" aria-label="Закрыть окно">Закрыть окно</button>
+      </section>
+      <section class="error-form visually-hidden">
+        <h2 class="error-form__header modal-window">Что-то пошло не так!</h2>
+        <p class="error-form__text modal-window">Проверьте поля, выделенные красным, скорее всего, вы забыли их заполнить.</p>
+        <button class="error-form__button form-btn form-btn--ok" aria-label="Нажать ОК">ОК</button>
+      </section>
     </main>
     <footer class="footer">
       <a href="/index.html" class="footer__link-main-page main-page-link" aria-label="Переход на главную страницу">PINK</a>
@@ -141,14 +152,13 @@
         var navMain = document.querySelector('.main-nav');
         var navToggle = document.querySelector('.main-nav__toggle');
         var navPageHeader = document.querySelector('.main-nav__header-wrap');
-        var MainShift = document.querySelector('.main-shift');
 
         navMain.classList.remove('main-nav--nojs');
         navPageHeader.classList.remove('main-nav--nojs');
         navMain.classList.remove('main-nav--opened');
         navMain.classList.add('main-nav--closed');
-        MainShift.classList.add('main-shift--closed');
-        MainShift.classList.remove('main-shift--opened');
+        navPageHeader.classList.remove('main-nav__header-wrap--opacity');
+        navPageHeader.classList.add('main-nav__header-wrap--no-opacity');
 
         navToggle.addEventListener('click', function() {
           if (navMain.classList.contains('main-nav--closed')) {
@@ -156,15 +166,11 @@
             navPageHeader.classList.add('main-nav__header-wrap--opacity');
             navMain.classList.remove('main-nav--closed');
             navMain.classList.add('main-nav--opened');
-            MainShift.classList.remove('main-shift--closed');
-            MainShift.classList.add('main-shift--opened');
           } else {
             navPageHeader.classList.add('main-nav__header-wrap--no-opacity');
             navPageHeader.classList.remove('main-nav__header-wrap--opacity');
             navMain.classList.add('main-nav--closed');
             navMain.classList.remove('main-nav--opened');
-            MainShift.classList.add('main-shift--closed');
-            MainShift.classList.remove('main-shift--opened');
           }
         });
       </script>
