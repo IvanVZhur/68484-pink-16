@@ -4,6 +4,10 @@
   align-items: center;
 
   background-color: @bg-page-header;
+
+  @media @tablet-width {
+    height: 0;
+  }
 }
 
 .intro__download-link {
@@ -40,7 +44,7 @@
 .intro__link {
   width: 60px;
   height: 60px;
-  margin: 0 15px;
+  margin: 0 14px;
 
   background-repeat: no-repeat;
 
@@ -48,7 +52,7 @@
 
   &--apple-store {
     background-image: url("../img/logo-apple.svg");
-    background-position: 50% 50%;
+    background-position: 110% 50%;
     background-size: 47px 56px;
   }
 
@@ -60,7 +64,7 @@
 
   &--windows-store {
     background-image: url("../img/logo-microsoft.svg");
-    background-position: 50% 70%;
+    background-position: 0% 70%;
     background-size: 44px 41px;
   }
 }
@@ -68,7 +72,25 @@
 .intro__available-text {
   width: 240px;
   margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 0 5px;
 
   color: #ffffff;
   .font-light-small;
+}
+
+@media @tablet-width {
+  .intro__download-link,
+  .intro__links-wrap,
+  .intro__available-text {
+    position: relative;
+    top: -365px;
+    left: -166px;
+  }
+
+  .intro__available-text {
+    width: 300px;
+    padding: 0 10px;
+    .font-light-medium;
+  }
 }

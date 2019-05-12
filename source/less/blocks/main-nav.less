@@ -10,12 +10,16 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 69px;
+  height: 67px;
 
   background-color: @bg-darkgrey;
 
   &--no-opacity {
     background-color: @bg-header;
+  }
+
+  @media @tablet-width {
+    height: 109px;
   }
 }
 
@@ -24,6 +28,13 @@
   height: 22px;
 
   background: url("../img/logo-pink-white-mobile.svg") no-repeat 20px 50%;
+
+  @media @tablet-width {
+    width: 200px;
+    height: 42px;
+
+    background: url("../img/logo-pink-white-tablet.svg") no-repeat 20px 50%;
+  }
 }
 
 .main-nav__toggle {
@@ -48,7 +59,7 @@
   background-color: transparent;
   background-image: url("../img/icon-menu-cross.svg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 68% 47%;
   background-size: 23px 22px;
 }
 
@@ -67,7 +78,9 @@
 }
 
 .main-nav__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  height: 28px;
   padding: 18px 10px;
 
   text-transform: uppercase;

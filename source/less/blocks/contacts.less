@@ -6,7 +6,8 @@
 
 .contacts__header-main {
   width: 230px;
-  margin-top: 50px;
+  margin-top: 42px;
+  margin-bottom: 12px;
   padding: 0 70px;
 
   .font-light-tall;
@@ -30,6 +31,21 @@
     width: 230px;
     margin-top: 0;
   }
+
+  &--email {
+    margin-left: 5px;
+  }
+
+  &--email:hover {
+    text-decoration: underline;
+    color: @bg-darkgrey;
+  }
+
+  &--email:active {
+    text-decoration: none;
+    color: @bg-darkgrey;
+    opacity: @active-opacity;
+  }
 }
 
 .contacts__map-wrap {
@@ -46,7 +62,7 @@
 
     display: flex;
     width: 100%;
-    height: 30px;
+    height: 50px;
 
     background: url("../img/bg-triangle-white-footer.svg") no-repeat 100% 50%;
     background-size: 100% 100%;

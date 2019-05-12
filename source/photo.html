@@ -26,12 +26,12 @@
             <a class="main-nav__link" href="form.html" aria-label="Конкурс">Конкурс</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTMLACADEMY">HTMLACADEMY</a>
+            <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTMLACADEMY">HTML ACADEMY</a>
           </li>
         </ul>
       </nav>
       <div class="page-header__img-wrap">
-        <h1 class="page-header__header">Фотографии пользователей</h1>
+        <h1 class="page-header__img-wrap-header">Фотографии пользователей</h1>
       </div>
     </header>
     <main class="main">
@@ -187,11 +187,23 @@
           <img class="upload__photo" src="img/photo-road-mobile@1x.jpg" alt="Фото для поста">
         </div>
         <div class="upload__toggle-wrap">
-          <button class="upload__toggle upload__toggle--crop">Обрезка</button>
-          <button class="upload__toggle upload__toggle--fill">Заливка</button>
-          <button class="upload__toggle upload__toggle--contrast">Контраст</button>
-          <div class="upload__scale-bar">
-            <div class="upload__pin"></div>
+          <div class="upload__photo-editor-filter">
+            <button class="upload__toggle upload__toggle--crop upload__toggle--active" type="button">Обрезка</button>
+            <div class="upload__scale-bar upload__scale-bar--crop">
+              <div class="upload__pin upload__pin--crop"></div>
+            </div>
+          </div>
+          <div class="upload__photo-editor-filter">
+            <button class="upload__toggle upload__toggle--fill" type="button">Заливка</button>
+            <div class="upload__scale-bar upload__scale-bar--hidden">
+              <div class="upload__pin upload__pin--fill"></div>
+            </div>
+          </div>
+          <div class="upload__photo-editor-filter">
+            <button class="upload__toggle upload__toggle--contrast" type="button">Контраст</button>
+            <div class="upload__scale-bar upload__scale-bar--hidden">
+              <div class="upload__pin upload__pin--contrast"></div>
+            </div>
           </div>
         </div>
         <div class="upload__button-wrap">
