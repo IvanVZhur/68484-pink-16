@@ -3,8 +3,54 @@
   <head>
     <title>HTML Academy: Пинк</title>
     <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width,initial-scale=1'/>
+    <meta content='true' name='HandheldFriendly'/>
+    <meta content='width' name='MobileOptimized'/>
+    <meta content='yes' name='apple-mobile-web-app-capable'/>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        html {
+          background: url("../img/pink-photo-mobile.jpg") 2px 0 no-repeat;
+        }
+
+        @media (min-width: 660px) {
+          html {
+            background-image: url("../img/pink-photo-tablet.jpg");
+          }
+        }
+
+        @media (min-width: 960px) {
+          html {
+            background-image: url("../img/pink-photo-desktop.jpg");
+          }
+        }
+
+        body {
+          opacity: 0.5;
+        }
+        BODY > * {
+            outline: 2px solid deeppink;
+        }
+        BODY > * > * {
+            outline: 2px dashed lime;
+            outline-offset: -2px;
+        }
+        BODY > * > * > * {
+            outline: 2px dotted dodgerblue;
+            outline-offset: -4px;
+        }
+        BODY > * > * > * > * {
+            outline: 2px dotted orange;
+            outline-offset: -4px;
+        }
+        BODY > * > * > * > * > * {
+            outline: 2px dotted red;
+            outline-offset: -4px;
+        }
+    </style>
+    <link href="../pixel-glass/styles.css" rel="stylesheet">
+    <script src="../pixel-glass/script.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -31,7 +77,7 @@
         </ul>
       </nav>
       <div class="page-header__img-wrap">
-        <h1 class="page-header__img-wrap-header">Фотографии пользователей</h1>
+        <h1 class="page-header__img page-header__img-header">Фотографии пользователей</h1>
       </div>
     </header>
     <main class="main">
@@ -182,7 +228,10 @@
       </section>
       <section class="upload">
         <h2 class="upload__header visually-hidden">Запостить</h2>
-        <p class="upload__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <div class="upload__text-wrap">
+          <p class="upload__text">Затмите их всех!</p>
+          <p class="upload__text">Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
         <div class="upload__photo-wrap">
           <img class="upload__photo" src="img/photo-road-mobile@1x.jpg" alt="Фото для поста">
         </div>
@@ -213,6 +262,7 @@
       </section>
     </main>
     <footer class="footer">
+      <section class="footer-links">
       <a href="/index.html" class="footer__link-main-page main-page-link" aria-label="Переход на главную страницу">PINK</a>
       <div class="footer__link-wrap">
         <a href="https://twitter.com/" class="footer__link social-link social-link--twitter"  aria-label="Твиттер">Twitter</a>
@@ -223,6 +273,7 @@
         <p class="footer__htmlacademy-text">Разработано</p>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link-htmlacademy htmlacademy-link" aria-label="HtmlAcademy">HtmlAcademy</a>
       </div>
+      </section>
     </footer>
     <script>
         var navMain = document.querySelector('.main-nav');

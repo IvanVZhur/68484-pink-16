@@ -12,7 +12,7 @@
   display: flex;
 
   background: url("../img/icon-timer.svg") no-repeat;
-  background-position: 0 59px;
+  background-position: 22px 45px;
   background-size: 238px 276px;
 
   .container(660px);
@@ -20,8 +20,8 @@
   &::before {
     content: "24";
     position: relative;
-    top: 114px;
-    left: 18px;
+    top: 100px;
+    left: 40px;
 
     display: flex;
     box-sizing: border-box;
@@ -40,18 +40,18 @@
 
 .research__about {
   width: 310px;
-  margin-left: auto;
-  padding: 94px 10px 35px;
+  margin-left: 101px;
+  padding: 77px 21px 35px;
 
   text-align: left;
   color: #000000;
 }
 
 .research__title {
-  width: 180px;
+  width: 168px;
+  min-height: 20px;
   margin: 0;
-  margin-bottom: 10px;
-  padding-right: 5px;
+  padding: 5px 5px;
 
   font-size: 30px;
   line-height: 36px;
@@ -59,14 +59,19 @@
 }
 
 .research__desc {
-  margin-bottom: 5px;
-  padding-right: 5px;
+  .reset-indent;
+  min-height: 50px;
+  padding: 5px 5px;
 
   .font-normal-small;
+  line-height: 24px;
 }
 
 .research__link {
   cursor: pointer;
+
+  display: flex;
+  padding: 5px 5px;
 
   text-decoration: underline;
   color: @hover-color;

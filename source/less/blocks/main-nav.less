@@ -19,21 +19,28 @@
   }
 
   @media @tablet-width {
-    height: 109px;
+    min-height: 110px;
+    padding: 10px auto;
   }
 }
 
 .main-nav__logo-link {
   width: 100px;
-  height: 22px;
+  min-height: 22px;
+  padding: 15px;
 
-  background: url("../img/logo-pink-white-mobile.svg") no-repeat 20px 50%;
+  background-image: url("../img/logo-pink-white-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 20px 50%;
+  background-size: 78px 24px;
 
   @media @tablet-width {
     width: 200px;
-    height: 42px;
+    min-height: 70px;
 
-    background: url("../img/logo-pink-white-tablet.svg") no-repeat 20px 50%;
+    background-image: url("../img/logo-pink-white-tablet.svg");
+    background-position: 25% 35%;
+    background-size: 150px auto;
   }
 }
 
@@ -53,6 +60,10 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 50px 24px;
+
+  @media @tablet-width {
+    background-position: 68% 50%;
+  }
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -61,6 +72,10 @@
   background-repeat: no-repeat;
   background-position: 68% 47%;
   background-size: 23px 22px;
+
+  @media @tablet-width {
+    background-position: 70% 50%;
+  }
 }
 
 .main-nav__list {
@@ -80,8 +95,8 @@
 .main-nav__link {
   display: flex;
   justify-content: center;
-  height: 28px;
-  padding: 18px 10px;
+  min-height: 20px;
+  padding: 17px 10px;
 
   text-transform: uppercase;
   text-decoration: none;
@@ -95,6 +110,10 @@
 
   &:active {
     color: @active-color;
+  }
+
+  @media @tablet-width {
+    padding: 16px 5px;
   }
 }
 

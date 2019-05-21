@@ -9,6 +9,48 @@
     <meta content='yes' name='apple-mobile-web-app-capable'/>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        html {
+          background: url("../img/pink-index-mobile.jpg") 50% 0 no-repeat;
+        }
+
+        @media (min-width: 660px) {
+          html {
+            background-image: url("../img/pink-index-tablet.jpg");
+          }
+        }
+
+        @media (min-width: 960px) {
+          html {
+            background-image: url("../img/pink-index-desktop.jpg");
+          }
+        }
+
+        body {
+          opacity: 0.5;
+        }
+        BODY > * {
+            outline: 2px solid deeppink;
+        }
+        BODY > * > * {
+            outline: 2px dashed lime;
+            outline-offset: -2px;
+        }
+        BODY > * > * > * {
+            outline: 2px dotted dodgerblue;
+            outline-offset: -4px;
+        }
+        BODY > * > * > * > *  {
+            outline: 2px dotted orange;
+            outline-offset: -4px;
+        }
+        BODY > * > * > * > * > * {
+            outline: 2px dotted red;
+            outline-offset: -4px;
+        }
+    </style>
+    <link href="../pixel-glass/styles.css" rel="stylesheet">
+    <script src="../pixel-glass/script.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -34,8 +76,8 @@
           </li>
         </ul>
       </nav>
-      <div class="page-header__img-wrap page-header__img-wrap--main-page">
-        <h1 class="page-header__img-wrap-header">Взгляните на жизнь иначе!</h1>
+      <div class="page-header__img page-header__img--main-page">
+        <h1 class="page-header__img page-header__img-header">Взгляните на жизнь иначе!</h1>
       </div>
     </header>
     <main  class="main">
@@ -106,11 +148,12 @@
           <h2 class="price__header visually-hidden">Цены</h2>
           <table class="slider">
             <tr class="slider__header-wrap">
+              <th class="slider__header slider__header--hidden"></th>
               <th class="slider__header slider__header--basis">
                 <p class="slider__header slider__header--desc">База</p>
                 <p class="slider__header slider__header--price">1,99 USD</p>
               </th>
-              <th class="slider__header slider__header--standart checked">
+              <th class="slider__header slider__header--standart slider__header--hit checked">
                 <p class="slider__header slider__header--desc">Стандарт</p>
                 <p class="slider__header slider__header--price">3,99 USD</p>
               </th>
@@ -120,16 +163,19 @@
               </th>
             </tr>
             <tr class="slider__row-wrap slider__property">
+              <td class="slider__property slider__property--before">Розовый фильтр </td>
               <td class="slider__property slider__property--rose-filter slider__row-wrap--yes">Розовый фильтр<span> Да</span></td>
               <td class="slider__property slider__property--rose-filter slider__row-wrap--yes">Розовый фильтр<span> Да</span></td>
               <td class="slider__property slider__property--rose-filter slider__row-wrap--yes">Розовый фильтр<span> Да</span></td>
             </tr>
             <tr class="slider__row-wrap slider__property">
+              <td class="slider__property slider__property--before">Смайлики</td>
               <td class="slider__property slider__property--smiles slider__row-wrap--no">Смайлики<span> Нет</span></td>
               <td class="slider__property slider__property--smiles slider__row-wrap--yes">Смайлики<span> Да</span></td>
               <td class="slider__property slider__property--smiles slider__row-wrap--yes">Смайлики<span> Да</span></td>
             </tr>
             <tr class="slider__row-wrap slider__property">
+              <td class="slider__property slider__property--before">Комментарии</td>
               <td class="slider__property slider__property--comments slider__row-wrap--no">Комментарии<span> Нет</span></td>
               <td class="slider__property slider__property--comments slider__row-wrap--no">Комментарии<span> Нет</span></td>
               <td class="slider__property slider__property--comments slider__row-wrap--yes">Комментарии<span> Да</span></td>
@@ -159,9 +205,23 @@
           <h3 class="contacts__type-header contacts__type-header--arrive">Приезжайте в гости:</h3>
           <p class="contacts__type-link  contacts__type-link--address">ул. Большая Конюшенная, 19/8</p>
         </div>
-        <div class="contacts__map-wrap">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.3825532060696!2d30.321867170842633!3d59.93855934194422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1556964860411!5m2!1sru!2sru"
-                width="100%" height="210" style="border:0" allowfullscreen></iframe>
+      </section>
+      <section class="map">
+        <div class="map__map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.3825532060696!2d30.321867170842633!3d59.93855934194422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1556964860411!5m2!1sru!2sru"
+            width="100%" height="210" style="border:0" allowfullscreen></iframe>
+        </div>
+      </section>
+      <section class="footer-links footer-links-main">
+        <a href="/index.html" class="footer__link-main-page main-page-link" aria-label="Переход на главную страницу">PINK</a>
+        <div class="footer__link-wrap">
+          <a href="https://twitter.com/" class="footer__link social-link social-link--twitter"  aria-label="Твиттер">Twitter</a>
+          <a href="https://www.facebook.com/" class="footer__link social-link social-link--facebook"  aria-label="Фэйсбук">Facebook</a>
+          <a href="https://www.youtube.com/" class="footer__link social-link social-link--youtube"  aria-label="Ютюб">YouTube</a>
+        </div>
+        <div class="footer__htmlacademy-wrap">
+          <p class="footer__htmlacademy-text">Разработано</p>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link-htmlacademy htmlacademy-link" aria-label="HtmlAcademy">HtmlAcademy</a>
         </div>
       </section>
     </footer>

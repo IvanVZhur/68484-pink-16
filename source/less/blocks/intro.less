@@ -4,17 +4,13 @@
   align-items: center;
 
   background-color: @bg-page-header;
-
-  @media @tablet-width {
-    height: 0;
-  }
 }
 
 .intro__download-link {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 22px;
 
   text-align: center;
   color: #ffffff;
@@ -37,60 +33,84 @@
 .intro__links-wrap {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  .container(280px);
   margin-top: 32px;
 }
 
 .intro__link {
   width: 60px;
   height: 60px;
-  margin: 0 14px;
 
   background-repeat: no-repeat;
-
+  background-position: 100% 50%;
   .reset-text-for-links;
 
   &--apple-store {
+    margin-left: 23px;
+    margin-right: 17px;
+
     background-image: url("../img/logo-apple.svg");
-    background-position: 110% 50%;
     background-size: 47px 56px;
   }
 
   &--android-store {
     background-image: url("../img/logo-android.svg");
-    background-position: 50% 70%;
-    background-size: 43px 47px;
+    background-size: 42px 47px;
+    background-position: 100% 70%;
   }
 
   &--windows-store {
+    margin-left: 23px;
+
     background-image: url("../img/logo-microsoft.svg");
-    background-position: 0% 70%;
     background-size: 44px 41px;
+    background-position: 100% 75%;
+  }
+
+  @media @tablet-width {
+    &--apple-store {
+      margin-left: 33px;
+    }
   }
 }
 
 .intro__available-text {
   width: 240px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  padding: 0 5px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  min-height: 20px;
+  padding: 5px;
 
   color: #ffffff;
   .font-light-small;
 }
 
 @media @tablet-width {
-  .intro__download-link,
-  .intro__links-wrap,
-  .intro__available-text {
-    position: relative;
-    top: -365px;
-    left: -166px;
+  .intro__download-link {
+    position: absolute;
+
+    .reset-indent;
+    width: 300px;
+    min-height: 20px;
+    padding: 0 8px;
+    transform: translate(-160px, -350px);
+  }
+
+  .intro__links-wrap {
+    position: absolute;
+
+    transform: translate(-169px, -282px);
   }
 
   .intro__available-text {
-    width: 300px;
-    padding: 0 10px;
+    position: absolute;
+
+    .container(300px);
+
     .font-light-medium;
+    line-height: 1.4;
+
+    transform: translate(-160px, -165px);
   }
 }
